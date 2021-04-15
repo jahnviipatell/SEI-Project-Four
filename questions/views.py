@@ -9,7 +9,7 @@ from rest_framework.exceptions import NotFound
 
 from .models import Question
 from .serializers.common import QuestionSerializer
-# from .serializers.populated import PopulatedQuestionSerializer
+from .serializers.populated import PopulatedQuestionSerializer
 
 class QuestionListView(APIView):
 #!A get method is SAFE - so user can view without authentication/token
@@ -20,7 +20,7 @@ class QuestionListView(APIView):
 #!GET Request
     def get(self, _request):
         questions = Question.objects.all() #! return everything from the db
-        serialized_questions = QuestionSerializer(questions, many=True) #! convert the data
+        serialized_questions = PopulatedQuestionSerializer(questions, many=True) #! convert the data
         return Response(serialized_questions.data, status=status.HTTP_200_OK)
 
 class QuestionDetailView(APIView):
@@ -33,7 +33,7 @@ class QuestionDetailView(APIView):
 
     def get(self, _request, pk):
         question = self.get_holiday(pk=pk)
-        serialized_questions = QuestionSerializer(question)
+        serialized_questions = PopulatedQuestionSerializer(question)
         return Response(serialized_questions.data, status=status.HTTP_200_OK)
 
     
