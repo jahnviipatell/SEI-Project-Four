@@ -1,0 +1,652 @@
+[
+{
+  "model": "questions.question",
+  "pk": 1,
+  "fields": {
+    "question": "Am the life of the party.",
+    "question_number": 1,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 2,
+  "fields": {
+    "question": "Feel little concern for others.",
+    "question_number": 2,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 3,
+  "fields": {
+    "question": "Am always prepared.",
+    "question_number": 3,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 4,
+  "fields": {
+    "question": "Get stressed out easily.",
+    "question_number": 4,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 5,
+  "fields": {
+    "question": "Have a rich vocabulary.",
+    "question_number": 5,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 6,
+  "fields": {
+    "question": "Don't talk a lot.",
+    "question_number": 6,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 7,
+  "fields": {
+    "question": "Am interested in people.",
+    "question_number": 7,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 8,
+  "fields": {
+    "question": "Leave my belongings around.",
+    "question_number": 8,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 9,
+  "fields": {
+    "question": "Am relaxed most of the time.",
+    "question_number": 9,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 10,
+  "fields": {
+    "question": "Have difficulty understanding abstract ideas.",
+    "question_number": 10,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 11,
+  "fields": {
+    "question": "Feel comfortable around people.",
+    "question_number": 11,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 12,
+  "fields": {
+    "question": "Insult people.",
+    "question_number": 12,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 13,
+  "fields": {
+    "question": "Pay attention to details.",
+    "question_number": 13,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 14,
+  "fields": {
+    "question": "Worry about things.",
+    "question_number": 14,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 15,
+  "fields": {
+    "question": "Have a vivid imagination.",
+    "question_number": 15,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 16,
+  "fields": {
+    "question": "Keep in the background",
+    "question_number": 16,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 17,
+  "fields": {
+    "question": "Sympathise with others' feelings.",
+    "question_number": 17,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 18,
+  "fields": {
+    "question": "Make a mess of things.",
+    "question_number": 18,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 19,
+  "fields": {
+    "question": "Seldom feel blue.",
+    "question_number": 19,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 20,
+  "fields": {
+    "question": "Am not interested in abstract ideas.",
+    "question_number": 20,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 21,
+  "fields": {
+    "question": "Start conversations.",
+    "question_number": 21,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 22,
+  "fields": {
+    "question": "Am not interested in other people's problems.",
+    "question_number": 22,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 23,
+  "fields": {
+    "question": "Get chores done right away.",
+    "question_number": 23,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 24,
+  "fields": {
+    "question": "Am easily disturbed.",
+    "question_number": 24,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 25,
+  "fields": {
+    "question": "Have excellent ideas.",
+    "question_number": 25,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 26,
+  "fields": {
+    "question": "Have little to say.",
+    "question_number": 26,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 27,
+  "fields": {
+    "question": "Have a soft heart",
+    "question_number": 27,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 28,
+  "fields": {
+    "question": "Often forget to put things back in their proper place.",
+    "question_number": 28,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 29,
+  "fields": {
+    "question": "Get upset easily.",
+    "question_number": 29,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 30,
+  "fields": {
+    "question": "Do not have a good imagination.",
+    "question_number": 30,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 31,
+  "fields": {
+    "question": "Talk to a lot of different people at parties.",
+    "question_number": 31,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 32,
+  "fields": {
+    "question": "Am not really interested in others.",
+    "question_number": 32,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 33,
+  "fields": {
+    "question": "Like order.",
+    "question_number": 33,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 34,
+  "fields": {
+    "question": "Change my mood a lot.",
+    "question_number": 34,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 35,
+  "fields": {
+    "question": "Am quick to understand things.",
+    "question_number": 35,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 36,
+  "fields": {
+    "question": "Don't like to draw attention to myself.",
+    "question_number": 36,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 37,
+  "fields": {
+    "question": "Take time out for others.",
+    "question_number": 37,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 38,
+  "fields": {
+    "question": "Shirk my duties.",
+    "question_number": 38,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 39,
+  "fields": {
+    "question": "Have frequent mood swings.",
+    "question_number": 39,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 40,
+  "fields": {
+    "question": "Use difficult words.",
+    "question_number": 40,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 41,
+  "fields": {
+    "question": "Don't mind being the center of attention",
+    "question_number": 41,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 42,
+  "fields": {
+    "question": "Feel others' emotions.",
+    "question_number": 42,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 43,
+  "fields": {
+    "question": "Follow a schedule.",
+    "question_number": 43,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 44,
+  "fields": {
+    "question": "Get irritated easily.",
+    "question_number": 44,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 45,
+  "fields": {
+    "question": "Spend time reflecting on things.",
+    "question_number": 45,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 46,
+  "fields": {
+    "question": "Am quiet around strangers.",
+    "question_number": 46,
+    "extroversion": true,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 47,
+  "fields": {
+    "question": "Make people feel at ease.",
+    "question_number": 47,
+    "extroversion": false,
+    "agreeableness": true,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 48,
+  "fields": {
+    "question": "Am exacting in my work.",
+    "question_number": 48,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": true,
+    "neuroticism": false,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 49,
+  "fields": {
+    "question": "Often feel blue.",
+    "question_number": 49,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": true,
+    "openness_to_experience": false
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 50,
+  "fields": {
+    "question": "Am full of ideas.",
+    "question_number": 50,
+    "extroversion": false,
+    "agreeableness": false,
+    "conscientiousness": false,
+    "neuroticism": false,
+    "openness_to_experience": true
+  }
+}
+]
