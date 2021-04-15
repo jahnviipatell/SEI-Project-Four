@@ -9,7 +9,7 @@ from .models import Answer
 
 from rest_framework.permissions import IsAuthenticated
 
-class CommentListView(APIView):
+class AnswerListView(APIView):
     permission_classes = (IsAuthenticated)
 
     def post(self, request):
