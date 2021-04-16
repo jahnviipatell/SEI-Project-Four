@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.exceptions import NotFound
 
 #! User related imports
-# from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
 from .models import Question

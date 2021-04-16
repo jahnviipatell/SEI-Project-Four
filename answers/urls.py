@@ -1,4 +1,4 @@
-from django.urs import path
+from django.urls import path
 from .views import AnswerListView
 
 urlpatterns = [

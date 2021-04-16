@@ -5,13 +5,21 @@ from rest_framework.exceptions import NotFound
 # , PermissionDenied
 
 from .serializers.common import AnswerSerializer
+from .serializers.populated import PopulatedAnswerSerializer
 from .models import Answer
 
 from rest_framework.permissions import IsAuthenticated
 
 class AnswerListView(APIView):
-    permission_classes = (IsAuthenticated)
+    permission_classes = (IsAuthenticated,)
 
+    #!GET Request
+    def get(self, _request):
+        answers = Answer.objects.all() #! return everything from the db
+        serialized_answers = PopulatedAnswerSerializer(answers, many=True) #! convert the data
+        return Response(serialized_answers.data, status=status.HTTP_200_OK)
+    
+    #!POST Request
     def post(self, request):
         request.data["owner"] = request.user.id
         answer_to_add = AnswerSerializer(data=request.data)
@@ -21,15 +29,15 @@ class AnswerListView(APIView):
         return Response(answer_to_add.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
-# class CommentDetailsView(APIView):
+class AnswerDetailView(APIView):
 
-# #! Delete Single Comment
-#     def delete(self, request, pk):
-#         try:
-#             comment_to_delete = Answer.objects.get(pk=pk)
-#         except Answer.DoesNotExist:
-#             raise NotFound()
-#         if comment_to_delete.owner != request.user:
-#             raise PermissionDenied()
-#         comment_to_delete.delete()
-#         return Response(status=status.HTTP_204_NO_CONTENT)
+    def get_answer(self, pk):
+        try:
+            return Answer.objects.get(pk=pk)
+        except Answer.DoesNotExist:
+            raise NotFound(detail="🏝 Cannot find that answer")
+
+    def get(self, _request, pk):
+        answer = self.get_answer(pk=pk)
+        serialized_answers = PopulatedAnswerSerializer(answer)
+        return Response(serialized_answers.data, status=status.HTTP_200_OK)
