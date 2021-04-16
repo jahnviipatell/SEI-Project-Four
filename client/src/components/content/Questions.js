@@ -1,35 +1,40 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+// import React, { useState, useEffect } from 'react'
+// import axios from 'axios'
+// import Carousel from 'react-bootstrap/Carousel'
 
 
-const Questions = () => {
+// const Questions = () => {
 
-  const [questions, setQuestions] = useState([])
+//   const [questions, setQuestions] = useState([])
 
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/questions')
-      setQuestions(data)
-    }
-    getData()
-  }, [])
+//   useEffect(() => {
+//     const getData = async () => {
+//       const { data } = await axios.get('/api/questions')
+//       setQuestions(data)
+//     }
+//     getData()
+//     // console.log(questions)
+//   }, [])
 
-  if (!questions) return null
-  console.log(questions[0].question)
+//   if (!questions) return null
 
-  return (
-    <>
-      <div>
-        <ul>
-          {questions.map(question => {
-            <li key={question._id}>
-              {question.question}
-            </li>
-          })}
-        </ul>
-      </div>
-    </>
-  )
-}
+//   return (
+//     <>
+//       <div>
+//         <Carousel>
+//           {questions.map(question => (
+//             // <>
+//             <Carousel.Item key={question._id}>
+//               <Carousel.Caption key={question._id}>
+//                 <h3 key={question._id}>{question.question}</h3>
+//               </Carousel.Caption>
+//             </Carousel.Item>
+//             // </>
+//           ))}
+//         </Carousel>
+//       </div>
+//     </>
+//   )
+// }
 
-export default Questions
+// export default Questions
