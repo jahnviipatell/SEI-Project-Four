@@ -6,10 +6,11 @@ import Button from 'react-bootstrap/Button'
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { userIsAuthenticated } from '../auth/helpers/auth'
+import ProgressBar from 'react-bootstrap/ProgressBar'
 
 
 const Questions = () => {
-
+  //! Get questions from api
   const [questions, setQuestions] = useState('')
 
   useEffect(() => {
@@ -20,20 +21,63 @@ const Questions = () => {
     getData()
   }, [])
 
-
   const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [now, setNow] = useState(0)
 
-  const handleNext = (event) => {
+  //! Handle Answers
+  const [answerData, setAnswerData] = useState({
+    one: false,
+    two: false,
+    three: false,
+    four: false,
+    five: false,
+    question: 0,
+  })
+
+  const handleAnswer = event => {
+    console.log('VALUE', event.target.innerHTML)
+    if (event.target.innerHTML === 1) {
+      const newAnswer = { ...answerData, [answerData.one]: true, [answerData.question]: currentQuestion.question_number }
+      setAnswerData(newAnswer)
+      console.log(newAnswer)
+    }
+  }
+
+  //! Set questions and progress
+
+
+  const handleNext = async event => {
     console.log('NEXT', event.target.value)
     setCurrentQuestion(currentQuestion + 1)
+    setNow(now + 2)
+    event.preventDefault()
+    try {
+      const response = await axios.post('/api/answers/', answerData)
+      console.log(response)
+    } catch (err) {
+      console.log(err)
+      // setAnswerErrors(err)
+      // console.log(answerErrors)
+    }
   }
 
   const handlePrevious = (event) => {
     console.log('PREVIOUS', event.target.value)
     setCurrentQuestion(currentQuestion - 1)
+    setNow(now - 2)
   }
 
-  console.log(setCurrentQuestion)
+  // const handleSubmitAnswer = event => {
+  //   event.preventDefault()
+  //   const response = axios.post('/api/answers/', answerData)
+  //   console.log(response)
+  // }
+
+  //* handleSave when the user clicks on the next question
+
+
+
+
 
   if (!questions) return null
 
@@ -57,12 +101,13 @@ const Questions = () => {
                     {currentQuestion >= 1 ?
                       <Button onClick={handlePrevious}>←</Button>
                       : null}
-                    <Button>1</Button> <Button>2</Button> <Button>3</Button> <Button>4</Button> <Button>5</Button>
+                    <Button onClick={handleAnswer}>1</Button> <Button>2</Button> <Button>3</Button> <Button>4</Button> <Button>5</Button>
                     {currentQuestion < 49 ?
                       <Button onClick={handleNext}>→</Button>
                       : null}
                   </ButtonGroup>
                 </ButtonToolbar>
+                <ProgressBar variant="warning" now={now} label={`${now}%`} />
               </Card.Body>
               :
               <Card.Body>
