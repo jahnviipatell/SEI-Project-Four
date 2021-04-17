@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import InputGroup from 'react-bootstrap/InputGroup'
 
 
 const Questions = () => {
-
-  // const [index, setIndex] = useState(0)
-
-  // const handleSelect = (selectedIndex) => {
-  //   setIndex(selectedIndex)
-  // }
 
   const [questions, setQuestions] = useState('')
 
@@ -23,16 +18,27 @@ const Questions = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0)
 
+  console.log(setCurrentQuestion)
+
   if (!questions) return null
 
   return (
-    <ul>
-      {/* {questions.map(question => ( */}
-      {/* <li key={question._id}>{question.question}</li> */}
-      {/* ))} */}
-      <h3>{questions[currentQuestion].question}</h3>
-
-    </ul>
+    <>
+      <ul>
+        {/* {questions.map(question => ( */}
+        {/* <li key={question._id}>{question.question}</li> */}
+        {/* ))} */}
+        <h3>{questions[currentQuestion].question}</h3>
+      </ul>
+      <InputGroup>
+        <InputGroup.Prepend>
+          <InputGroup.Radio aria-label="Radio button for following text input" />
+        </InputGroup.Prepend>
+        <InputGroup.Prepend>
+          <InputGroup.Radio aria-label="Radio button for following text input" />
+        </InputGroup.Prepend>
+      </InputGroup>
+    </>
   )
 }
 
