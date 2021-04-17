@@ -37,6 +37,48 @@ const MyNavbar = () => {
           <Nav className="mr-auto">
             {/* <Nav.Link href="/map">Map</Nav.Link> */}
             {/* <Nav.Link href="/packages">Packages</Nav.Link> */}
+          </Nav>
+          <>
+            {!userIsAuthenticated() &&
+              <>
+                {['bottom'].map((placement) => (
+                  <OverlayTrigger
+                    trigger="click"
+                    key={placement}
+                    placement={placement}
+                    overlay={
+                      <Popover id={`popover-positioned-${placement}`}>
+                        <Popover.Title as="h3">{'Fill in your details'}</Popover.Title>
+                        <Popover.Content>
+                          <Login />
+                          {/* <strong>Holy guacamole!</strong> Check this info. */}
+                        </Popover.Content>
+                      </Popover>
+                    }
+                  >
+                    <Button variant="secondary">Login</Button>
+                  </OverlayTrigger>
+                ))}
+                {['bottom'].map((placement) => (
+                  <OverlayTrigger
+                    trigger="click"
+                    key={placement}
+                    placement={placement}
+                    overlay={
+                      <Popover id={`popover-positioned-${placement}`}>
+                        <Popover.Title as="h3">{'Fill in your details'}</Popover.Title>
+                        <Popover.Content>
+                          <Register />
+                          {/* <strong>Holy guacamole!</strong> Check this info. */}
+                        </Popover.Content>
+                      </Popover>
+                    }
+                  >
+                    <Button variant="secondary">Sign Up</Button>
+                  </OverlayTrigger>
+                ))}
+              </>
+            }
             {userIsAuthenticated() &&
               <>
                 <Nav.Link href="/profile">Profile</Nav.Link>
@@ -44,44 +86,6 @@ const MyNavbar = () => {
                 <Nav.Link onClick={handleLogout}>Log Out</Nav.Link>
               </>
             }
-          </Nav>
-          <>
-            {['bottom'].map((placement) => (
-              <OverlayTrigger
-                trigger="click"
-                key={placement}
-                placement={placement}
-                overlay={
-                  <Popover id={`popover-positioned-${placement}`}>
-                    <Popover.Title as="h3">{'Fill in your details'}</Popover.Title>
-                    <Popover.Content>
-                      <Login />
-                      {/* <strong>Holy guacamole!</strong> Check this info. */}
-                    </Popover.Content>
-                  </Popover>
-                }
-              >
-                <Button variant="secondary">Login</Button>
-              </OverlayTrigger>
-            ))}
-            {['bottom'].map((placement) => (
-              <OverlayTrigger
-                trigger="click"
-                key={placement}
-                placement={placement}
-                overlay={
-                  <Popover id={`popover-positioned-${placement}`}>
-                    <Popover.Title as="h3">{'Fill in your details'}</Popover.Title>
-                    <Popover.Content>
-                      <Register />
-                      {/* <strong>Holy guacamole!</strong> Check this info. */}
-                    </Popover.Content>
-                  </Popover>
-                }
-              >
-                <Button variant="secondary">Sign Up</Button>
-              </OverlayTrigger>
-            ))}
           </>
         </Navbar.Collapse>
       </Navbar>
