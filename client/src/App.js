@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './Home'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import MyNavbar from './Navbar'
 
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/">
+          <MyNavbar />
           <Home />
         </Route>
       </Switch>
