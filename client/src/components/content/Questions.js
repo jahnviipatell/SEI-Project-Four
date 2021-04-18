@@ -32,6 +32,7 @@ const Questions = () => {
     four: false,
     five: false,
     question: 0,
+    owner: 1,
   })
 
   const [Errors, setErrors] = useState({
@@ -41,12 +42,22 @@ const Questions = () => {
     four: false,
     five: false,
     question: 0,
+    owner: 1,
   })
 
   const handleAnswer = event => {
     console.log('VALUE', event.target.innerHTML)
     if (event.target.innerHTML === 1) {
       const newAnswer = { ...answerData, [answerData.one]: true, [answerData.question]: currentQuestion.question_number }
+      // const newAnswer = {
+      //   one: true,
+      //   two: false,
+      //   three: false,
+      //   four: false,
+      //   five: false,
+      //   question: 0,
+      //   owner: 1,
+      // }
       setAnswerData(newAnswer)
       // answerData.one = true
       // answerData.question = currentQuestion.question_number
@@ -63,8 +74,12 @@ const Questions = () => {
     setCurrentQuestion(currentQuestion + 1)
     setNow(now + 2)
     try {
-      const response = await axios.post('/api/answers/', answerData)
-      window.localStorage.setItem('token', response.data.token)
+      const token = window.localStorage.getItem('token')
+      const response = await axios.post('/api/answers/', { answerData }, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       console.log(response)
     } catch (err) {
       console.log(err)
