@@ -4,8 +4,9 @@ from ..serializers.common import QuestionSerializer
 
 from jwt_auth.serializers.common import UserSerializer
 
+
 class PopulatedQuestionSerializer(QuestionSerializer):
-    
+
     answers = PopulatedAnswerSerializer(many=True)
     # airline_options = AirlineOptionSerializer(many=True)
-    owner = UserSerializer()
+    # owner = UserSerializer()
