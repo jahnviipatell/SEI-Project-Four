@@ -34,32 +34,47 @@ const Questions = () => {
     question: 0,
   })
 
+  const [Errors, setErrors] = useState({
+    one: false,
+    two: false,
+    three: false,
+    four: false,
+    five: false,
+    question: 0,
+  })
+
   const handleAnswer = event => {
     console.log('VALUE', event.target.innerHTML)
     if (event.target.innerHTML === 1) {
       const newAnswer = { ...answerData, [answerData.one]: true, [answerData.question]: currentQuestion.question_number }
       setAnswerData(newAnswer)
+      // answerData.one = true
+      // answerData.question = currentQuestion.question_number
+      console.log(answerData)
       console.log(newAnswer)
     }
+
   }
 
   //! Set questions and progress
-
-
   const handleNext = async event => {
+    event.preventDefault()
     console.log('NEXT', event.target.value)
     setCurrentQuestion(currentQuestion + 1)
     setNow(now + 2)
-    event.preventDefault()
     try {
       const response = await axios.post('/api/answers/', answerData)
+      window.localStorage.setItem('token', response.data.token)
       console.log(response)
     } catch (err) {
       console.log(err)
-      // setAnswerErrors(err)
-      // console.log(answerErrors)
+      setErrors(Errors)
+      console.log(Errors)
     }
   }
+
+
+
 
   const handlePrevious = (event) => {
     console.log('PREVIOUS', event.target.value)
