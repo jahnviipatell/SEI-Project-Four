@@ -10,15 +10,17 @@ from .models import Answer
 
 from rest_framework.permissions import IsAuthenticated
 
+
 class AnswerListView(APIView):
     permission_classes = (IsAuthenticated,)
 
     #!GET Request
     def get(self, _request):
-        answers = Answer.objects.all() #! return everything from the db
-        serialized_answers = PopulatedAnswerSerializer(answers, many=True) #! convert the data
+        answers = Answer.objects.all()  # ! return everything from the db
+        serialized_answers = PopulatedAnswerSerializer(
+            answers, many=True)  # ! convert the data
         return Response(serialized_answers.data, status=status.HTTP_200_OK)
-    
+
     #!POST Request
     def post(self, request):
         request.data["owner"] = request.user.id
