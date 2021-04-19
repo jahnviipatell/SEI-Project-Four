@@ -7,6 +7,7 @@ import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { userIsAuthenticated } from '../auth/helpers/auth'
 import ProgressBar from 'react-bootstrap/ProgressBar'
+import { Link } from 'react-router-dom'
 
 
 const Questions = () => {
@@ -68,6 +69,10 @@ const Questions = () => {
   let scoreC = 0
   let scoreN = 0
   let scoreO = 0
+  // let submit = 0
+
+  const [Submit, setSubmit] = useState(0)
+
 
   const handleAnswer = event => {
     console.log('VALUE', event.target.innerHTML)
@@ -276,8 +281,34 @@ const Questions = () => {
   //   setNow(now - 2)
   // }
 
-  const handleResults = () => {
+  const handleSubmit = async () => {
     console.log('set results here')
+    // setCurrentQuestion(currentQuestion + 1)
+    setSubmit(Submit + 1)
+    console.log(Submit)
+    setNow(now + 2)
+    setExtroversion(Extroversion + E)
+    console.log('Extroversion', Extroversion)
+    setAgreeableness(Agreeableness + A)
+    setConscientiousness(Conscientiousness + C)
+    setNeuroticism(Neuroticism + N)
+    setOpennessToExperience(OpennessToExperience + O)
+    try {
+      const token = window.localStorage.getItem('token')
+      await axios.post('/api/answers/', answerData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      console.log('POSTED ANSWER TO DB')
+    } catch (err) {
+      setErrors(err.response.data)
+      console.log(Errors)
+    }
+  }
+
+  const handleResults = () => {
+    console.log('Handle Results here')
   }
 
   if (!questions) return null
@@ -308,10 +339,14 @@ const Questions = () => {
                     {currentQuestion < 49 ?
                       <Button onClick={handleNext}>→</Button>
                       :
-                      <>
-                        <Button onClick={handleNext}>→</Button>
-                        <Button onClick={handleResults}>View Results</Button>
-                      </>
+                      <Button onClick={handleSubmit}>Submit</Button>
+                    }
+                    {Submit >= 1 ?
+                      <Link to={'/profile'} >
+                        <Button onClick={handleResults}>Results</Button>
+                      </Link>
+                      :
+                      null
                     }
                   </ButtonGroup>
                 </ButtonToolbar>

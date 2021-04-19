@@ -30,6 +30,13 @@ class AnswerListView(APIView):
             return Response(answer_to_add.data, status=status.HTTP_201_CREATED)
         return Response(answer_to_add.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
+    #!DELETE Request
+    def delete(self, request):
+        request.data["owner"] = request.user.id
+        answers = Answer.objects.all()
+        answers.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 class AnswerDetailView(APIView):
 
