@@ -43,3 +43,8 @@ class AnswerDetailView(APIView):
         answer = self.get_answer(pk=pk)
         serialized_answers = PopulatedAnswerSerializer(answer)
         return Response(serialized_answers.data, status=status.HTTP_200_OK)
+
+    def delete(self, _request, pk):
+        answer_to_delete = self.get_answer(pk=pk)
+        answer_to_delete.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
