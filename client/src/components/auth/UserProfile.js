@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { getPayloadFromToken, getTokenFromLocalStorage } from './helpers/auth'
+import Results from './Results'
 
 const UserProfile = () => {
 
@@ -24,9 +25,12 @@ const UserProfile = () => {
   if (!userData) return null
   console.log(userData)
 
-
+  // console.log(userData.answers[0].question)
   return (
-    <h3>Hello World</h3>
+    <>
+      <h3>Hello World</h3>
+      <Results />
+    </>
   )
 }
 
