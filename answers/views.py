@@ -44,7 +44,7 @@ class AnswerDetailView(APIView):
         try:
             return Answer.objects.get(pk=pk)
         except Answer.DoesNotExist:
-            raise NotFound(detail="🏝 Cannot find that answer")
+            raise NotFound(detail="❌ Cannot find that answer")
 
     def get(self, _request, pk):
         answer = self.get_answer(pk=pk)

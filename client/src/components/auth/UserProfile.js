@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { getPayloadFromToken, getTokenFromLocalStorage } from './helpers/auth'
 
 const UserProfile = () => {
 
+  const token = getTokenFromLocalStorage()
+  const userID = getPayloadFromToken().sub
 
   const [userData, setUserData] = useState(null)
 
   useEffect(() => {
     const getUser = async () => {
-      const token = window.localStorage.getItem('token')
-      const response = await axios.get('/api/profile/', {
+      const response = await axios.get(`/api/auth/${userID}/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
