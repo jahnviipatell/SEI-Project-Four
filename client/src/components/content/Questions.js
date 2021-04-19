@@ -43,11 +43,19 @@ const Questions = () => {
     question: '',
   })
 
+  // const [Score, setScore] = useState(0)
+
+  const e = [1, 6, 11, 16, 21, 26, 31, 36, 41, 46]
+  // const a = [2, 7, 12, 17, 22, 27, 32, 37, 42, 47]
+  // const c = [3, 8, 13, 18, 23, 28, 33, 38, 43, 48]
+  // const n = [4, 9, 14, 19, 24, 29, 34, 39, 44, 49]
+  // const o = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+
   const [Extroversion, setExtroversion] = useState(0)
-  const [Agreeableness, setAgreeableness] = useState(0)
-  const [Conscientiousness, setConscientiousness] = useState(0)
-  const [Neuroticism, setNeuroticism] = useState(0)
-  const [OpennessToExperience, setOpennessToExperience] = useState(0)
+  // const [Agreeableness, setAgreeableness] = useState(0)
+  // const [Conscientiousness, setConscientiousness] = useState(0)
+  // const [Neuroticism, setNeuroticism] = useState(0)
+  // const [OpennessToExperience, setOpennessToExperience] = useState(0)
 
   const handleAnswer = event => {
     console.log('VALUE', event.target.innerHTML)
@@ -61,8 +69,16 @@ const Questions = () => {
         five: false,
         question: questions[currentQuestion].question_number,
       }
+      // setScore(Score + 1)
+      // console.log(Score)
+      if (e.includes(currentQuestion + 1)) {
+        console.log('e includes this question')
+        setExtroversion(Extroversion + 1)
+        console.log(Extroversion)
+      }
       setAnswerData(newAnswer)
       console.log(answerData)
+      // setScore(0)
     } else if (event.target.innerHTML === '2') {
       const newAnswer = {
         one: false,
@@ -107,71 +123,9 @@ const Questions = () => {
       }
       setAnswerData(newAnswer)
       console.log(answerData)
-    }
-    if (currentQuestion + 1 === 1 ||
-      currentQuestion === 6 ||
-      currentQuestion === 11 ||
-      currentQuestion === 16 ||
-      currentQuestion === 21 ||
-      currentQuestion === 26 ||
-      currentQuestion === 31 ||
-      currentQuestion === 36 ||
-      currentQuestion === 41 ||
-      currentQuestion === 46) {
-      setExtroversion(Extroversion + Number(event.target.HTML))
-      console.log(Extroversion)
-    } if (currentQuestion === 2 ||
-      currentQuestion === 7 ||
-      currentQuestion === 12 ||
-      currentQuestion === 17 ||
-      currentQuestion === 22 ||
-      currentQuestion === 27 ||
-      currentQuestion === 32 ||
-      currentQuestion === 37 ||
-      currentQuestion === 42 ||
-      currentQuestion === 47) {
-      setAgreeableness(Agreeableness + Number(event.target.HTML))
-      console.log(Agreeableness)
-    } if (currentQuestion === 3 ||
-      currentQuestion === 8 ||
-      currentQuestion === 13 ||
-      currentQuestion === 18 ||
-      currentQuestion === 23 ||
-      currentQuestion === 28 ||
-      currentQuestion === 33 ||
-      currentQuestion === 38 ||
-      currentQuestion === 43 ||
-      currentQuestion === 48) {
-      setConscientiousness(Conscientiousness + Number(event.target.HTML))
-      console.log(Conscientiousness)
-    } if (currentQuestion === 4 ||
-      currentQuestion === 9 ||
-      currentQuestion === 14 ||
-      currentQuestion === 19 ||
-      currentQuestion === 24 ||
-      currentQuestion === 29 ||
-      currentQuestion === 34 ||
-      currentQuestion === 39 ||
-      currentQuestion === 44 ||
-      currentQuestion === 49) {
-      setNeuroticism(Neuroticism + Number(event.target.HTML))
-      console.log(Neuroticism)
-    } if (currentQuestion === 5 ||
-      currentQuestion === 10 ||
-      currentQuestion === 15 ||
-      currentQuestion === 20 ||
-      currentQuestion === 25 ||
-      currentQuestion === 20 ||
-      currentQuestion === 35 ||
-      currentQuestion === 40 ||
-      currentQuestion === 45 ||
-      currentQuestion === 50) {
-      setOpennessToExperience(OpennessToExperience + Number(event.target.HTML))
-      console.log(OpennessToExperience)
     } else {
-      console.log('Scoring Error')
+      console.log('SetAnswer Error')
     }
-
   }
 
   //! Set questions and progress
