@@ -32,82 +32,59 @@ const Questions = () => {
     four: false,
     five: false,
     question: 0,
-    owner: 1,
+    // owner: 1,
   })
 
   const [Errors, setErrors] = useState({
-    one: false,
-    two: false,
-    three: false,
-    four: false,
-    five: false,
-    question: 0,
-    owner: 1,
+    one: '',
+    two: '',
+    three: '',
+    four: '',
+    five: '',
+    question: '',
+    // owner: '',
   })
 
   const handleAnswer = event => {
     console.log('VALUE', event.target.innerHTML)
-    if (event.target.innerHTML === 1) {
-      const newAnswer = { ...answerData, [answerData.one]: true, [answerData.question]: currentQuestion.question_number }
-      // const newAnswer = {
-      //   one: true,
-      //   two: false,
-      //   three: false,
-      //   four: false,
-      //   five: false,
-      //   question: 0,
-      //   owner: 1,
-      // }
-      setAnswerData(newAnswer)
-      // answerData.one = true
-      // answerData.question = currentQuestion.question_number
-      console.log(answerData)
-      console.log(newAnswer)
+    // if (event.target.innerHTML === 1) {
+    const newAnswer = {
+      one: true,
+      two: false,
+      three: false,
+      four: false,
+      five: false,
+      question: questions[currentQuestion].question_number,
     }
+    setAnswerData(newAnswer)
+    console.log(answerData)
+    // }
 
   }
 
   //! Set questions and progress
-  const handleNext = async event => {
-    event.preventDefault()
-    console.log('NEXT', event.target.value)
+  const handleNext = async () => {
     setCurrentQuestion(currentQuestion + 1)
     setNow(now + 2)
     try {
       const token = window.localStorage.getItem('token')
-      const response = await axios.post('/api/answers/', { answerData }, {
+      await axios.post('/api/answers/', answerData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
-      console.log(response)
+      console.log('POSTED ANSWER TO DB')
     } catch (err) {
-      console.log(err)
-      setErrors(Errors)
+      setErrors(err.response.data)
       console.log(Errors)
     }
   }
-
-
-
 
   const handlePrevious = (event) => {
     console.log('PREVIOUS', event.target.value)
     setCurrentQuestion(currentQuestion - 1)
     setNow(now - 2)
   }
-
-  // const handleSubmitAnswer = event => {
-  //   event.preventDefault()
-  //   const response = axios.post('/api/answers/', answerData)
-  //   console.log(response)
-  // }
-
-  //* handleSave when the user clicks on the next question
-
-
-
-
 
   if (!questions) return null
 
