@@ -56,6 +56,13 @@ const Questions = () => {
   const [Neuroticism, setNeuroticism] = useState(0)
   const [OpennessToExperience, setOpennessToExperience] = useState(0)
 
+  const [E, setE] = useState(0)
+  const [A, setA] = useState(0)
+  const [C, setC] = useState(0)
+  const [N, setN] = useState(0)
+  const [O, setO] = useState(0)
+
+
   let scoreE = 0
   let scoreA = 0
   let scoreC = 0
@@ -76,33 +83,32 @@ const Questions = () => {
       }
       if (e.includes(currentQuestion + 1)) {
         console.log('e includes this question')
-        // setExtroversion(Extroversion + 1)
-        // console.log(Extroversion)
         scoreE = 1
         console.log('ScoreE', scoreE)
       } else if (a.includes(currentQuestion + 1)) {
         console.log('a includes this questions')
-        // setAgreeableness(Agreeableness + 1)
         scoreA = 1
         console.log('ScoreA', scoreA)
       } else if (c.includes(currentQuestion + 1)) {
         console.log('c includes this questions')
-        // setConscientiousness(Conscientiousness + 1)
         scoreC = 1
         console.log('ScoreC', scoreC)
       } else if (n.includes(currentQuestion + 1)) {
         console.log('n includes this questions')
-        // setNeuroticism(Neuroticism + 1)
         scoreN = 1
         console.log('ScoreN', scoreN)
       } else if (o.includes(currentQuestion + 1)) {
         console.log('o includes this questions')
-        // setOpennessToExperience(OpennessToExperience + 1)
         scoreO = 1
         console.log('ScoreO', scoreO)
       }
       setAnswerData(newAnswer)
       console.log(answerData)
+      setE(scoreE)
+      setA(scoreA)
+      setC(scoreC)
+      setN(scoreN)
+      setO(scoreO)
     } else if (event.target.innerHTML === '2') {
       const newAnswer = {
         one: false,
@@ -114,23 +120,28 @@ const Questions = () => {
       }
       if (e.includes(currentQuestion + 1)) {
         console.log('e includes this question')
-        setExtroversion(Extroversion + 2)
-        console.log(Extroversion)
+        scoreE = 2
+        console.log('ScoreE', scoreE)
       } else if (a.includes(currentQuestion + 1)) {
         console.log('a includes this questions')
-        setAgreeableness(Agreeableness + 2)
+        scoreA = 2
       } else if (c.includes(currentQuestion + 1)) {
         console.log('c includes this questions')
-        setConscientiousness(Conscientiousness + 2)
+        scoreC = 2
       } else if (n.includes(currentQuestion + 1)) {
         console.log('n includes this questions')
-        setNeuroticism(Neuroticism + 2)
+        scoreN = 2
       } else if (o.includes(currentQuestion + 1)) {
         console.log('o includes this questions')
-        setOpennessToExperience(OpennessToExperience + 2)
+        scoreO = 2
       }
       setAnswerData(newAnswer)
       console.log(answerData)
+      setE(scoreE)
+      setA(scoreA)
+      setC(scoreC)
+      setN(scoreN)
+      setO(scoreO)
     } else if (event.target.innerHTML === '3') {
       const newAnswer = {
         one: false,
@@ -142,23 +153,28 @@ const Questions = () => {
       }
       if (e.includes(currentQuestion + 1)) {
         console.log('e includes this question')
-        setExtroversion(Extroversion + 3)
-        console.log(Extroversion)
+        scoreE = 3
+        console.log('ScoreE', scoreE)
       } else if (a.includes(currentQuestion + 1)) {
         console.log('a includes this questions')
-        setAgreeableness(Agreeableness + 3)
+        scoreA = 3
       } else if (c.includes(currentQuestion + 1)) {
         console.log('c includes this questions')
-        setConscientiousness(Conscientiousness + 3)
+        scoreC = 3
       } else if (n.includes(currentQuestion + 1)) {
         console.log('n includes this questions')
-        setNeuroticism(Neuroticism + 3)
+        scoreN = 3
       } else if (o.includes(currentQuestion + 1)) {
         console.log('o includes this questions')
-        setOpennessToExperience(OpennessToExperience + 3)
+        scoreO = 3
       }
       setAnswerData(newAnswer)
       console.log(answerData)
+      setE(scoreE)
+      setA(scoreA)
+      setC(scoreC)
+      setN(scoreN)
+      setO(scoreO)
     } else if (event.target.innerHTML === '4') {
       const newAnswer = {
         one: false,
@@ -170,23 +186,28 @@ const Questions = () => {
       }
       if (e.includes(currentQuestion + 1)) {
         console.log('e includes this question')
-        setExtroversion(Extroversion + 4)
-        console.log(Extroversion)
+        scoreE = 4
+        console.log('ScoreE', scoreE)
       } else if (a.includes(currentQuestion + 1)) {
         console.log('a includes this questions')
-        setAgreeableness(Agreeableness + 4)
+        scoreA = 4
       } else if (c.includes(currentQuestion + 1)) {
         console.log('c includes this questions')
-        setConscientiousness(Conscientiousness + 4)
+        scoreC = 4
       } else if (n.includes(currentQuestion + 1)) {
         console.log('n includes this questions')
-        setNeuroticism(Neuroticism + 4)
+        scoreN = 4
       } else if (o.includes(currentQuestion + 1)) {
         console.log('o includes this questions')
-        setOpennessToExperience(OpennessToExperience + 4)
+        scoreO = 4
       }
       setAnswerData(newAnswer)
       console.log(answerData)
+      setE(scoreE)
+      setA(scoreA)
+      setC(scoreC)
+      setN(scoreN)
+      setO(scoreO)
     } else if (event.target.innerHTML === '5') {
       const newAnswer = {
         one: false,
@@ -198,23 +219,28 @@ const Questions = () => {
       }
       if (e.includes(currentQuestion + 1)) {
         console.log('e includes this question')
-        setExtroversion(Extroversion + 5)
-        console.log(Extroversion)
+        scoreE = 5
+        console.log('ScoreE', scoreE)
       } else if (a.includes(currentQuestion + 1)) {
         console.log('a includes this questions')
-        setAgreeableness(Agreeableness + 5)
+        scoreA = 5
       } else if (c.includes(currentQuestion + 1)) {
         console.log('c includes this questions')
-        setConscientiousness(Conscientiousness + 5)
+        scoreC = 5
       } else if (n.includes(currentQuestion + 1)) {
         console.log('n includes this questions')
-        setNeuroticism(Neuroticism + 5)
+        scoreN = 5
       } else if (o.includes(currentQuestion + 1)) {
         console.log('o includes this questions')
-        setOpennessToExperience(OpennessToExperience + 5)
+        scoreO = 5
       }
       setAnswerData(newAnswer)
       console.log(answerData)
+      setE(scoreE)
+      setA(scoreA)
+      setC(scoreC)
+      setN(scoreN)
+      setO(scoreO)
     } else {
       console.log('SetAnswer Error')
     }
@@ -224,11 +250,12 @@ const Questions = () => {
   const handleNext = async () => {
     setCurrentQuestion(currentQuestion + 1)
     setNow(now + 2)
-    setExtroversion(Extroversion + scoreE)
-    setAgreeableness(Agreeableness + scoreA)
-    setConscientiousness(Conscientiousness + scoreC)
-    setNeuroticism(Neuroticism + scoreN)
-    setOpennessToExperience(OpennessToExperience + scoreO)
+    setExtroversion(Extroversion + E)
+    console.log('Extroversion', Extroversion)
+    setAgreeableness(Agreeableness + A)
+    setConscientiousness(Conscientiousness + C)
+    setNeuroticism(Neuroticism + N)
+    setOpennessToExperience(OpennessToExperience + O)
     try {
       const token = window.localStorage.getItem('token')
       await axios.post('/api/answers/', answerData, {
@@ -280,7 +307,12 @@ const Questions = () => {
                     <Button onClick={handleAnswer}>1</Button> <Button onClick={handleAnswer}>2</Button> <Button onClick={handleAnswer}>3</Button> <Button onClick={handleAnswer}>4</Button> <Button onClick={handleAnswer}>5</Button>
                     {currentQuestion < 49 ?
                       <Button onClick={handleNext}>→</Button>
-                      : <Button onClick={handleResults}>View Results</Button>}
+                      :
+                      <>
+                        <Button onClick={handleNext}>→</Button>
+                        <Button onClick={handleResults}>View Results</Button>
+                      </>
+                    }
                   </ButtonGroup>
                 </ButtonToolbar>
                 <ProgressBar variant="warning" now={now} label={`${now}%`} />
@@ -293,7 +325,6 @@ const Questions = () => {
           </Accordion.Collapse>
         </Card>
       </Accordion>
-      <h4>{scoreE}</h4>
       <h3>E = {Extroversion}</h3>
       <h3>A = {Agreeableness}</h3>
       <h3>C = {Conscientiousness}</h3>
