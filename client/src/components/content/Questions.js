@@ -348,8 +348,8 @@ const Questions = () => {
       <Accordion>
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="outline-light" eventKey="0">
-              Take Test!
+            <Accordion.Toggle as={Button} className="take-test" variant="outline-light" eventKey="0">
+              Click to Take Test!
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">

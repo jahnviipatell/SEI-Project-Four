@@ -2,7 +2,7 @@
 
 
 #root {
-  // background-color: grey;
+  // background-color: white;
   // color: white;
   text-align: center;
 }
@@ -223,18 +223,43 @@ button.button.register-button:checked {
 .steps {
   display: flex;
   width: 80vw;
-  margin: 0 auto;
+  margin: 60px auto 0;
   justify-content: space-between;
 }
 .step-container {
-  width: 20vw;
+  width: 25vw;
 }
 .step-header {
   background-color: #ffc107;
-
+  border-radius: 15px;
+  position: absolute;
+  width: 20vw;
+  z-index: 3;
+  margin-top: -10px;
+  margin-left: 2.5vw;
+  font-size: 3vh;
+  padding: 3px 0;
 }
 .step-paragraph {
   border: solid black 5px;
-  height: 150px;
+  height: 135px;
   text-align: center;
+  z-index: 2;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 5px 5px grey;
+}
+//! Test
+div.card {
+  background-color: transparent;
+  // border: solid black 5px;
+  width: 80vw;
+  margin: 20px auto;
+}
+div.card-header {
+  background-color: transparent;
+}
+.take-test {
+  background-color: #ffc107;
+  
 }

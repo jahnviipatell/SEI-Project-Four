@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 // import { Link } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ const Login = () => {
     email: '',
     password: '',
   })
-  const history = useHistory()
+  // const history = useHistory()
 
   const handleChange = event => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
@@ -23,7 +23,7 @@ const Login = () => {
     const response = await axios.post('api/auth/login/', formData)
     window.localStorage.setItem('token', response.data.token)
 
-    history.push('/profile')
+    // history.push('/profile')
     console.log(response)
     window.location.reload()
   }
