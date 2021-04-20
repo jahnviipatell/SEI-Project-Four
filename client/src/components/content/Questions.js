@@ -371,26 +371,21 @@ const Questions = () => {
                 </ul>
                 <ButtonToolbar aria-label="Toolbar with button groups">
                   <ButtonGroup className="mr-2" aria-label="First group">
-                    {currentQuestion >= 1 ?
-                      <Button
-                      // onClick={handlePrevious}
+                    <h6>Strongly Disagree</h6>
+                    {/* {currentQuestion >= 1 ?
+                      <Button className="test-button"
+                      onClick={handlePrevious}
                       >←</Button>
-                      : null}
-                    <Button onClick={handleAnswer}>1</Button> <Button onClick={handleAnswer}>2</Button> <Button onClick={handleAnswer}>3</Button> <Button onClick={handleAnswer}>4</Button> <Button onClick={handleAnswer}>5</Button>
-                    {currentQuestion < 49 ?
-                      <Button onClick={handleNext}>→</Button>
-                      :
-                      <Button onClick={handleSubmit}>Submit</Button>
-                    }
-                    {Submit >= 1 ?
-                      // <Link to={'/profile'} >
-                      <Button onClick={handleResults}>Results</Button>
-                      // </Link>
-                      :
-                      null
-                    }
+                      : null} */}
+                    <Button variant="dark" className="test-button" onClick={handleAnswer}>1</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>2</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>3</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>4</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>5</Button>
+                    <h6>Strongly Agree</h6>
                   </ButtonGroup>
                 </ButtonToolbar>
+                {currentQuestion < 49 ?
+                  <Button variant="dark" className="test-button" onClick={handleNext}>→</Button>
+                  :
+                  <Button onClick={handleSubmit}>Submit</Button>
+                }
                 <ProgressBar variant="warning" now={now} label={`${now}%`} />
               </Card.Body>
               :
@@ -400,7 +395,14 @@ const Questions = () => {
             }
           </Accordion.Collapse>
         </Card>
-      </Accordion>
+      </Accordion >
+      {Submit >= 1 ?
+        // <Link to={'/profile'} >
+        <Button onClick={handleResults}>Results</Button>
+        // </Link>
+        :
+        null
+      }
       {
         results ?
           <>
@@ -444,7 +446,7 @@ const Questions = () => {
                   },
                 }}
               />
-            </div>
+            </div >
           </>
           :
           null
