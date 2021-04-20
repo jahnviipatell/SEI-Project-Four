@@ -14,7 +14,7 @@ const App = () => {
           <Home />
         </Route>
         <Route path="/profile">
-          <MyNavbar />
+          {/* <MyNavbar /> */}
           <UserProfile />
         </Route>
       </Switch>
