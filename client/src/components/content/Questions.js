@@ -330,10 +330,25 @@ const Questions = () => {
         <li></li>
         <li></li>
       </ul>
+      <div className="steps">
+        <div className="step-container">
+          <h4 className="step-header">Complete the Test</h4>
+          <p className="step-paragraph"><br /><br />Be yourself and answer honestly to find out your personality type.</p>
+        </div>
+        <div className="step-container">
+          <h4 className="step-header">Submit your Answers</h4>
+          <p className="step-paragraph"><br /><br />Your results will be calculated and stored on your profile
+          </p>
+        </div>
+        <div className="step-container">
+          <h4 className="step-header">View your Results</h4>
+          <p className="step-paragraph"><br /><br />Click on the results button to view your personalised report.</p>
+        </div>
+      </div>
       <Accordion>
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
+            <Accordion.Toggle as={Button} variant="outline-light" eventKey="0">
               Take Test!
             </Accordion.Toggle>
           </Card.Header>
@@ -369,58 +384,59 @@ const Questions = () => {
               </Card.Body>
               :
               <Card.Body>
-                <h3>Please Login to take test!</h3>
+                <h3>Oops...Please login first!</h3>
               </Card.Body>
             }
           </Accordion.Collapse>
         </Card>
       </Accordion>
-      {results ?
-        <>
-          <div>
-            <Doughnut
-              data={{
-                labels: ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'],
-                datasets: [
-                  {
-                    label: 'Your Personality Trait Scores',
-                    data: [Extroversion, Agreeableness, Conscientiousness, Neuroticism, OpennessToExperience],
-                    backgroundColor: [
-                      'rgba(0, 230, 184, 0.9)',
-                      'rgba(255, 51, 119, 0.9)',
-                      'rgba(0, 184, 230, 0.9)',
-                      'rgba(255, 117, 26, 0.9)',
-                      'rgba(196, 77, 255, 0.9)'
-                    ],
-                    hoverBorderWidth: 5,
-                    borderColor: [
-                      'rgba(0, 230, 184, 1)',
-                      'rgba(255, 51, 119, 1)',
-                      'rgba(0, 184, 230, 1)',
-                      'rgba(255, 117, 26, 1)',
-                      'rgba(196, 77, 255, 1)'
-                    ],
-                    borderWidth: 1,
-                  }
-                ],
-              }}
-              height={400}
-              width={400}
-              options={{
-                maintainAspectRatio: false,
-                scales: {
-                  yAxes: {
-                    ticks: {
-                      beginAtZero: true,
+      {
+        results ?
+          <>
+            <div>
+              <Doughnut
+                data={{
+                  labels: ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'],
+                  datasets: [
+                    {
+                      label: 'Your Personality Trait Scores',
+                      data: [Extroversion, Agreeableness, Conscientiousness, Neuroticism, OpennessToExperience],
+                      backgroundColor: [
+                        'rgba(0, 230, 184, 0.9)',
+                        'rgba(255, 51, 119, 0.9)',
+                        'rgba(0, 184, 230, 0.9)',
+                        'rgba(255, 117, 26, 0.9)',
+                        'rgba(196, 77, 255, 0.9)'
+                      ],
+                      hoverBorderWidth: 5,
+                      borderColor: [
+                        'rgba(0, 230, 184, 1)',
+                        'rgba(255, 51, 119, 1)',
+                        'rgba(0, 184, 230, 1)',
+                        'rgba(255, 117, 26, 1)',
+                        'rgba(196, 77, 255, 1)'
+                      ],
+                      borderWidth: 1,
+                    }
+                  ],
+                }}
+                height={400}
+                width={400}
+                options={{
+                  maintainAspectRatio: false,
+                  scales: {
+                    yAxes: {
+                      ticks: {
+                        beginAtZero: true,
+                      },
                     },
                   },
-                },
-              }}
-            />
-          </div>
-        </>
-        :
-        null
+                }}
+              />
+            </div>
+          </>
+          :
+          null
       }
     </>
   )
