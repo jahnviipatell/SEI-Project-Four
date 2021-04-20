@@ -7,8 +7,8 @@ import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { userIsAuthenticated } from '../auth/helpers/auth'
 import ProgressBar from 'react-bootstrap/ProgressBar'
-import { Doughnut } from 'react-chartjs-2'
-
+import { defaults, Doughnut } from 'react-chartjs-2'
+defaults.global.legend.position = 'bottom'
 
 const Questions = () => {
   //! Get questions from api
@@ -365,56 +365,51 @@ const Questions = () => {
       </Accordion>
       {results ?
         <>
-          <h3>E = {Extroversion}</h3>
-          <h3>A = {Agreeableness}</h3>
-          <h3>C = {Conscientiousness}</h3>
-          <h3>N = {Neuroticism}</h3>
-          <h3>O = {OpennessToExperience}</h3>
+          <div>
+            <Doughnut
+              data={{
+                labels: ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'],
+                datasets: [
+                  {
+                    label: 'Your Personality Trait Scores',
+                    data: [Extroversion, Agreeableness, Conscientiousness, Neuroticism, OpennessToExperience],
+                    backgroundColor: [
+                      'rgba(0, 230, 184, 0.9)',
+                      'rgba(255, 51, 119, 0.9)',
+                      'rgba(0, 184, 230, 0.9)',
+                      'rgba(255, 117, 26, 0.9)',
+                      'rgba(196, 77, 255, 0.9)'
+                    ],
+                    hoverBorderWidth: 5,
+                    borderColor: [
+                      'rgba(0, 230, 184, 1)',
+                      'rgba(255, 51, 119, 1)',
+                      'rgba(0, 184, 230, 1)',
+                      'rgba(255, 117, 26, 1)',
+                      'rgba(196, 77, 255, 1)'
+                    ],
+                    borderWidth: 1,
+                  }
+                ],
+              }}
+              height={400}
+              width={400}
+              options={{
+                maintainAspectRatio: false,
+                scales: {
+                  yAxes: {
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                  },
+                },
+              }}
+            />
+          </div>
         </>
         :
         null
       }
-      <div>
-        <Doughnut
-          data={{
-            labels: ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'],
-            datasets: [
-              {
-                label: 'Your Personality Trait Scores',
-                data: [Extroversion, Agreeableness, Conscientiousness, Neuroticism, OpennessToExperience],
-                backgroundColor: [
-                  'rgba(0, 230, 184, 0.9)',
-                  'rgba(255, 51, 119, 0.9)',
-                  'rgba(0, 184, 230, 0.9)',
-                  'rgba(255, 117, 26, 0.9)',
-                  'rgba(196, 77, 255, 0.9)'
-                ],
-                hoverBorderWidth: 5,
-                borderColor: [
-                  'rgba(0, 230, 184, 1)',
-                  'rgba(255, 51, 119, 1)',
-                  'rgba(0, 184, 230, 1)',
-                  'rgba(255, 117, 26, 1)',
-                  'rgba(196, 77, 255, 1)'
-                ],
-                borderWidth: 1,
-              }
-            ],
-          }}
-          height={400}
-          width={400}
-          options={{
-            maintainAspectRatio: false,
-            scales: {
-              yAxes: {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            },
-          }}
-        />
-      </div>
     </>
   )
 }
