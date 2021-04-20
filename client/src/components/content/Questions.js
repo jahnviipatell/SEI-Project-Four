@@ -7,7 +7,7 @@ import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { userIsAuthenticated } from '../auth/helpers/auth'
 import ProgressBar from 'react-bootstrap/ProgressBar'
-// import { Link } from 'react-router-dom'
+import { Doughnut } from 'react-chartjs-2'
 
 
 const Questions = () => {
@@ -370,6 +370,16 @@ const Questions = () => {
           <h3>C = {Conscientiousness}</h3>
           <h3>N = {Neuroticism}</h3>
           <h3>O = {OpennessToExperience}</h3>
+          <div>
+            <Doughnut
+              data={{
+                labels: ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'],
+
+              }}
+              height={400}
+              width={400}
+            />
+          </div>
         </>
         :
         null
