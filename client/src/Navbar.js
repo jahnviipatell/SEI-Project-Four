@@ -31,7 +31,7 @@ const MyNavbar = () => {
   return (
     <>
       <Navbar expand="lg" className="bring-to-front">
-        <Navbar.Brand href="/"><img className="logo" src='/assets/ede517f09fd247849485e2ca628a91bb.png' /></Navbar.Brand>
+        <Navbar.Brand href="/"><img className="logo" src="/assets/50c1610064e14d1aa26e5c7cf69b67a5.png" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

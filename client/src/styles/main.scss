@@ -1,5 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 
+html {
+  scroll-behavior: smooth;
+}
 
 #root {
   // background-color: white;
@@ -14,12 +17,12 @@
 
 //! Navbar
 .logo {
-  margin-top: 20px;
-  margin-left: -30px;
-  height: 200px;
+  margin-top: -1.5vh;
+  margin-left: -1vw;
+  height: 100px;
 }
 nav {
-  height: 75px;
+  height: 50px;
   overflow-y: hidden;
 }
 a.nav-link {
@@ -204,30 +207,33 @@ button.button.register-button:checked {
 }
 
 //! UNCOMMENT
-// @keyframes animate {
-// 	0% {
-// 		transform: translateY(0) rotate(0deg);
-// 		opacity: 0;
-// 	}
-// 	50% {
-// 		transform: translateY(-60vh) rotate(360deg);
-// 		opacity: 1;
-// 	}
-// 	100% {
-// 		transform: translateY(-120vh) rotate(720deg);
-// 		opacity: 0;
-// 	}
-// }
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(-60vh) rotate(360deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-120vh) rotate(720deg);
+		opacity: 0;
+	}
+}
 
 //! Steps 
 .steps {
   display: flex;
   width: 80vw;
-  margin: 60px auto 0;
+  margin: 100px auto 0;
   justify-content: space-between;
 }
 .step-container {
   width: 25vw;
+}
+.step-container:hover {
+  transform: scale(1.1, 1.1);
 }
 .step-header {
   background-color: #ffc107;
@@ -235,10 +241,11 @@ button.button.register-button:checked {
   position: absolute;
   width: 20vw;
   z-index: 3;
-  margin-top: -10px;
+  margin-top: -15px;
   margin-left: 2.5vw;
-  font-size: 3vh;
-  padding: 3px 0;
+  font-size: 2.5vh;
+  padding: 6px 0;
+  box-shadow: 2px 2px rgba(254, 254, 254, 0.9);
 }
 .step-paragraph {
   border: solid black 5px;
@@ -247,19 +254,111 @@ button.button.register-button:checked {
   z-index: 2;
   padding-left: 10px;
   padding-right: 10px;
-  box-shadow: 5px 5px grey;
+  box-shadow: 5px 5px #ffc107;
+}
+.large-logo {
+  height: 200px;
+}
+.app-description {
+  height: 225px;
+  display: absolute;
+  margin-top: 50px;
+}
+.description {
+  position: absolute;
+  font-size: 3vh;
+  font-weight: bold;
+  // font-style: oblique;
+  margin-left: 39.5vw;
+  margin-top: -6vh;
 }
 //! Test
 div.card {
   background-color: transparent;
   // border: solid black 5px;
   width: 80vw;
-  margin: 20px auto;
+  margin: 100px auto;
 }
 div.card-header {
   background-color: transparent;
 }
 .take-test {
-  background-color: #ffc107;
-  
+  background-color: #ffc107; 
 }
+.card-body {
+  width: 50vw;
+  margin: 0 auto;
+  height: 230px;
+}
+
+//! Scroll
+body{
+  // margin:0;
+  // padding:0;
+  // display:flex;
+  // height: 100vh;
+  // justify-content:center;
+  // align-items:center;
+  // font-family:sans-serif;
+  // background:#222;
+  .indicator{
+    position:relative;
+    width:10px;
+    height:10px;
+    margin-left: 95vw;
+    margin-top: 7vh;
+    
+    transform:rotate(45deg);
+    span{
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      box-sizing:border-box;
+      border:none;
+      border-bottom:3px solid #fff;
+      border-right:3px solid #fff;
+      animation:scroll 1s linear infinite;
+      &:nth-child(1){
+        top:-30px;
+        left:-30px;
+        animation-delay:0s;
+      }
+      &:nth-child(2){
+        top:-15px;
+        left:-15px;
+        animation-delay:0.2s;
+      }
+      &:nth-child(3){
+        top:0;
+        left:0;
+        animation-delay:0.4s;
+      }
+      &:nth-child(4){
+        top:15px;
+        left:15px;
+        animation-delay:0.6s;
+      }
+      &:nth-child(5){
+        top:30px;
+        left:30px;
+        animation-delay:0.8s;
+      }
+    }
+  }
+}
+@keyframes scroll{
+  0%{
+    border-color:rgb(0, 0, 0);
+    transform:translate(0,0);
+  }
+  20%{
+    border-color:rgb(0, 0, 0);
+    transform:translate(15px,15px);
+  }
+  20.1%,100%{
+    border-color:#ffd64a;
+  }
+}
+

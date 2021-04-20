@@ -330,20 +330,31 @@ const Questions = () => {
         <li></li>
         <li></li>
       </ul>
+      <div className="app-description">
+        <img className="large-logo" src="/assets/50c1610064e14d1aa26e5c7cf69b67a5.png" />
+        <p className="description">﹒The Big 5 Personality Test﹒</p>
+      </div>
       <div className="steps">
         <div className="step-container">
-          <h4 className="step-header">Complete the Test</h4>
+          <h4 className="step-header">﹒Complete the Test﹒</h4>
           <p className="step-paragraph"><br /><br />Be yourself and answer honestly to find out your personality type.</p>
         </div>
         <div className="step-container">
-          <h4 className="step-header">Submit your Answers</h4>
+          <h4 className="step-header">﹒Submit your Answers﹒</h4>
           <p className="step-paragraph"><br /><br />Your results will be calculated and stored on your profile
           </p>
         </div>
         <div className="step-container">
-          <h4 className="step-header">View your Results</h4>
+          <h4 className="step-header">﹒View your Results﹒</h4>
           <p className="step-paragraph"><br /><br />Click on the results button to view your personalised report.</p>
         </div>
+      </div>
+      <div className="indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <Accordion>
         <Card>
@@ -356,7 +367,7 @@ const Questions = () => {
             {userIsAuthenticated() ?
               <Card.Body>
                 <ul>
-                  <h3>{questions[currentQuestion].question}</h3>
+                  <h3 className="question">{questions[currentQuestion].question}</h3>
                 </ul>
                 <ButtonToolbar aria-label="Toolbar with button groups">
                   <ButtonGroup className="mr-2" aria-label="First group">
