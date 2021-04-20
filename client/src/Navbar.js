@@ -48,7 +48,7 @@ const MyNavbar = () => {
                     placement={placement}
                     overlay={
                       <Popover id={`popover-positioned-${placement}`}>
-                        <Popover.Title as="h3">{'Fill in your details'}</Popover.Title>
+                        <Popover.Title className="enter-details" as="h3">{'Enter Your Details'}</Popover.Title>
                         <Popover.Content>
                           <Login />
                           {/* <strong>Holy guacamole!</strong> Check this info. */}
@@ -66,7 +66,7 @@ const MyNavbar = () => {
                     placement={placement}
                     overlay={
                       <Popover id={`popover-positioned-${placement}`}>
-                        <Popover.Title as="h3">{'Fill in your details'}</Popover.Title>
+                        <Popover.Title className="enter-details" as="h3">{'Enter Your Details'}</Popover.Title>
                         <Popover.Content>
                           <Register />
                           {/* <strong>Holy guacamole!</strong> Check this info. */}

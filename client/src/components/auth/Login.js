@@ -29,49 +29,38 @@ const Login = () => {
   }
 
   return (
-    <div className="login">
-      <section className="section" id="login-section">
-        <div className="container">
-          <div className="columns">
-            <form
-            // onSubmit={handleSubmit}
-            >
-              <div className="field">
-                <label className="label">Email</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    placeholder="Email"
-                    name="email"
-                    value={formData.email}
-                    onChange={(event) => handleChange(event)}
-                  />
-                </div>
-              </div>
-              <div className="field">
-                <label className="label">Password</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    value={formData.password}
-                    onChange={(event) => handleChange(event)}
-                  />
-                </div>
-              </div>
-              <div className="field">
-                {/* <Link to={`/${formData.username}`}> */}
-                <button onClick={handleSubmit} type="submit" className="button register-button">Log Me In!</button>
-                {/* </Link> */}
-              </div>
-            </form>
-          </div>
-        </div >
-      </section >
-    </div>
-
+    <form>
+      <div className="field">
+        <label className="label">Email:</label>
+        <div className="control">
+          <input
+            className="input"
+            placeholder="Email"
+            name="email"
+            value={formData.email}
+            onChange={(event) => handleChange(event)}
+          />
+        </div>
+      </div>
+      <div className="field">
+        <label className="label">Password:</label>
+        <div className="control">
+          <input
+            className="input"
+            type="password"
+            placeholder="Password"
+            name="password"
+            value={formData.password}
+            onChange={(event) => handleChange(event)}
+          />
+        </div>
+      </div>
+      <div className="field">
+        {/* <Link to={`/${formData.username}`}> */}
+        <button onClick={handleSubmit} type="submit" className="button register-button">Log Me In!</button>
+        {/* </Link> */}
+      </div>
+    </form>
   )
 }
 
