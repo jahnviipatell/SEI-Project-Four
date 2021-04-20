@@ -7,7 +7,7 @@ import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { userIsAuthenticated } from '../auth/helpers/auth'
 import ProgressBar from 'react-bootstrap/ProgressBar'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 
 const Questions = () => {
@@ -69,7 +69,6 @@ const Questions = () => {
   let scoreC = 0
   let scoreN = 0
   let scoreO = 0
-  // let submit = 0
 
   const [Submit, setSubmit] = useState(0)
 
@@ -307,8 +306,12 @@ const Questions = () => {
     }
   }
 
+  const [results, setResults] = useState(false)
+  console.log(results)
+
   const handleResults = () => {
     console.log('Handle Results here')
+    setResults(true)
   }
 
   if (!questions) return null
@@ -342,9 +345,9 @@ const Questions = () => {
                       <Button onClick={handleSubmit}>Submit</Button>
                     }
                     {Submit >= 1 ?
-                      <Link to={'/profile'} >
-                        <Button onClick={handleResults}>Results</Button>
-                      </Link>
+                      // <Link to={'/profile'} >
+                      <Button onClick={handleResults}>Results</Button>
+                      // </Link>
                       :
                       null
                     }
@@ -360,11 +363,17 @@ const Questions = () => {
           </Accordion.Collapse>
         </Card>
       </Accordion>
-      <h3>E = {Extroversion}</h3>
-      <h3>A = {Agreeableness}</h3>
-      <h3>C = {Conscientiousness}</h3>
-      <h3>N = {Neuroticism}</h3>
-      <h3>O = {OpennessToExperience}</h3>
+      {results ?
+        <>
+          <h3>E = {Extroversion}</h3>
+          <h3>A = {Agreeableness}</h3>
+          <h3>C = {Conscientiousness}</h3>
+          <h3>N = {Neuroticism}</h3>
+          <h3>O = {OpennessToExperience}</h3>
+        </>
+        :
+        null
+      }
     </>
   )
 }

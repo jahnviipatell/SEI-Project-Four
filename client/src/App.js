@@ -2,7 +2,7 @@ import React from 'react'
 import Home from './Home'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MyNavbar from './Navbar'
-import UserProfile from './components/auth/UserProfile'
+import UserProfile from './components/content/UserProfile'
 
 
 const App = () => {
