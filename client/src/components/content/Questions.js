@@ -283,7 +283,6 @@ const Questions = () => {
   // }
 
   const handleSubmit = async () => {
-    window.scrollTo(0, 1550)
     console.log('set results here')
     // setCurrentQuestion(currentQuestion + 1)
     setSubmit(Submit + 1)
@@ -312,12 +311,16 @@ const Questions = () => {
   const [results, setResults] = useState(false)
 
   const handleResults = () => {
+    window.scrollTo(0, 1250)
     console.log('Handle Results here')
     setResults(true)
   }
 
-  const handleScroll = () => {
-    window.scrollTo(0, 700)
+  // const handleScroll = () => {
+  //   window.scrollTo(0, 70)
+  // }
+  const handleMoreScroll = () => {
+    window.scrollTo(0, 600)
   }
 
   if (!questions) return null
@@ -343,18 +346,18 @@ const Questions = () => {
           <p className="step-paragraph"><br /><br />Click on the results button to view your personalised report.</p>
         </div>
       </div>
-      <div className="indicator" onClick={handleScroll}>
+      {/* <div className="indicator" onClick={handleScroll}>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </div> */}
       <div className="second-page">
         <Accordion>
           <Card>
             <Card.Header>
-              <Accordion.Toggle as={Button} className="take-test" variant="outline-light" eventKey="0">
+              <Accordion.Toggle onClick={handleMoreScroll} as={Button} className="take-test" variant="outline-light" eventKey="0">
                 Click to Take Test!
               </Accordion.Toggle>
             </Card.Header>
@@ -405,7 +408,7 @@ const Questions = () => {
         {
           results ?
             <>
-              <div>
+              <div className="doughnut">
                 <Doughnut
                   data={{
                     labels: ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'],
@@ -432,8 +435,8 @@ const Questions = () => {
                       }
                     ],
                   }}
-                  height={300}
-                  width={300}
+                  height={350}
+                  width={350}
                   options={{
                     maintainAspectRatio: false,
                     scales: {

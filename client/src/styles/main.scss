@@ -37,7 +37,7 @@ a.nav-link {
   border: none;
   border-radius: 0px;
 }
-.nav-button:hover {
+.nav-link:hover {
   // background-color: white;
   color: black;
   text-decoration: none;
@@ -94,7 +94,7 @@ button.button.register-button:checked {
 	background: #ffc107;
 	animation: animate 25s linear infinite;
 	// bottom: calc(-150px - 40vh);
-	bottom: calc(-150px - 57vh);
+	bottom: calc(-150px - 42vh);
 }
 
 .circles li:nth-child(1) {
@@ -208,20 +208,20 @@ button.button.register-button:checked {
 }
 
 //! UNCOMMENT
-// @keyframes animate {
-// 	0% {
-// 		transform: translateY(0) rotate(0deg);
-// 		opacity: 0;
-// 	}
-// 	50% {
-// 		transform: translateY(-60vh) rotate(360deg);
-// 		opacity: 1;
-// 	}
-// 	100% {
-// 		transform: translateY(-120vh) rotate(720deg);
-// 		opacity: 0;
-// 	}
-// }
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(-60vh) rotate(360deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-120vh) rotate(720deg);
+		opacity: 0;
+	}
+}
 
 //! Steps 
 .steps {
@@ -300,7 +300,7 @@ button.button.register-button:checked {
 }
 //! Test
 .second-page {
-  height: 90vh;
+  height: 80vh;
 }
 .show {
   background: transparentize($color: white, $amount: 0.5);
@@ -320,7 +320,7 @@ div.card-header {
 .card-body {
   width: 50vw;
   margin: 0 auto;
-  height: 500px;
+  height: 450px;
 }
 .question {
   font-size: 6vh;
@@ -442,7 +442,8 @@ body{
   background-color: black;
   color: white;
   width: 60%;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  margin-top: -40px;
 }
 .result-data {
   list-style: none;
@@ -452,13 +453,18 @@ body{
   margin: 20px auto;
   padding-left: 0;
 }
+.doughnut {
+  height: 370px;
+}
 .all-li {
   height: 200px;
-  width: 90vw;
+  width: 85vw;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 .E {
   border: solid #00E6B8 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .all-titles {
   font-size: 2vh;
@@ -468,30 +474,35 @@ body{
   margin-top: -15px;
   margin-left: 20px;
   padding-top: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .E-title {
   background-color: #00E6B8;
 }
 .A {
   border: solid 3px rgba(255, 51, 119, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .A-title {
   background-color: rgba(255, 51, 119, 1);
 }
 .C {
   border: solid 3px rgba(0, 184, 230, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .C-title {
   background-color: rgba(0, 184, 230, 1);
 }
 .N {
   border: solid 3px rgba(255, 117, 26, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .N-title {
   background-color: rgba(255, 117, 26, 1);
 }
 .O {
   border: solid 3px rgba(196, 77, 255, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .O-title {
   background-color: rgba(196, 77, 255, 1);
