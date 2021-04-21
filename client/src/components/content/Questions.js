@@ -335,16 +335,16 @@ const Questions = () => {
         <p className="description">﹒The Big 5 Personality Test﹒</p>
       </div>
       <div className="steps">
-        <div className="step-container">
+        <div className="step-container one">
           <h4 className="step-header">﹒Complete the Test﹒</h4>
           <p className="step-paragraph"><br /><br />Be yourself and answer honestly to find out your personality type.</p>
         </div>
-        <div className="step-container">
+        <div className="step-container two">
           <h4 className="step-header">﹒Submit your Answers﹒</h4>
           <p className="step-paragraph"><br /><br />Your results will be calculated and stored on your profile
           </p>
         </div>
-        <div className="step-container">
+        <div className="step-container three">
           <h4 className="step-header">﹒View your Results﹒</h4>
           <p className="step-paragraph"><br /><br />Click on the results button to view your personalised report.</p>
         </div>
@@ -382,7 +382,7 @@ const Questions = () => {
                   </ButtonGroup>
                 </ButtonToolbar>
                 {currentQuestion < 49 ?
-                  <Button variant="dark" className="test-button" onClick={handleNext}>→</Button>
+                  <Button variant="dark" className="test-button next-button" onClick={handleNext}>→</Button>
                   :
                   <Button onClick={handleSubmit}>Submit</Button>
                 }

@@ -56,7 +56,7 @@ const MyNavbar = () => {
                       </Popover>
                     }
                   >
-                    <Button variant="outline-light">Login</Button>
+                    <Button className="nav-button" variant="outline-light">Login</Button>
                   </OverlayTrigger>
                 ))}
                 {['bottom'].map((placement) => (
@@ -74,7 +74,7 @@ const MyNavbar = () => {
                       </Popover>
                     }
                   >
-                    <Button variant="outline-light">Sign Up</Button>
+                    <Button className="nav-button" variant="outline-light">Sign Up</Button>
                   </OverlayTrigger>
                 ))}
               </>

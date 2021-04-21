@@ -30,14 +30,14 @@ a.nav-link {
   color: black;
   font-weight: 700;
 }
-.btn {
+.nav-button {
   background-color: white;
   color: black;
   font-weight: 700;
   border: none;
   border-radius: 0px;
 }
-.btn:hover {
+.nav-button:hover {
   // background-color: white;
   color: black;
   text-decoration: none;
@@ -232,6 +232,31 @@ button.button.register-button:checked {
 .step-container {
   width: 25vw;
 }
+.one {
+  animation: pulse 6s infinite;
+  // -o-animation-duration: 2s;
+  animation-delay: 0s;
+}
+.two {
+  animation: pulse 6s infinite;
+  animation-delay: 1.5s;
+}
+.three {
+  animation: pulse 6s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1, 1.1)
+  }
+  50% {
+    transform: scale(1, 1)
+  }
+  100% {
+    transform: scale(1.1, 1.1)
+  }
+}
 .step-container:hover {
   transform: scale(1.1, 1.1);
 }
@@ -294,23 +319,39 @@ div.card-header {
   font-weight: bold;
   margin-top: 80px;
   margin-bottom: 80px;
+  // transition: ease-in-out;
+  // transition-duration: 2s;
+  // transition-delay: 1s;
 }
 .btn-toolbar {
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 }
 h6 {
   font-style: oblique;
   margin-bottom: 0;
+  margin-right: 10px;
+  margin-left: 10px;
   font-size: 1.5vh;
   display: flex;
   align-self: center;
 }
 .test-button {
-  margin: 5px;
+  margin: 5px 5px;
+  // margin-left: 5px;
+  background-color: #ffc107;
 }
 .test-button:hover {
-  background-color: #ffc107;
+  background-color: darkgrey;
   // transform: scale(1.2, 1.2);
+}
+.next-button {
+  width: 34%;
+  margin-bottom: 20px;
+}
+.progress {
+  width: 70%;
+  margin: 0 auto;
+  // background-color: black;
 }
 
 //! Scroll
