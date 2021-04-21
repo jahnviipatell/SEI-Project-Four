@@ -30,7 +30,7 @@ a.nav-link {
   color: black;
   font-weight: 700;
 }
-.nav-button {
+.nav-button, .btn {
   background-color: white;
   color: black;
   font-weight: 700;
@@ -93,7 +93,8 @@ button.button.register-button:checked {
 	height: 20px;
 	background: #ffc107;
 	animation: animate 25s linear infinite;
-	bottom: calc(-150px - 40vh);
+	// bottom: calc(-150px - 40vh);
+	bottom: calc(-150px - 65vh);
 }
 
 .circles li:nth-child(1) {
@@ -102,7 +103,7 @@ button.button.register-button:checked {
 	height: 80px;
 	animation-delay: 0s;
 	animation-duration: 20s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -113,7 +114,7 @@ button.button.register-button:checked {
 	height: 20px;
 	animation-delay: 0s;
 	animation-duration: 25s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -124,7 +125,7 @@ button.button.register-button:checked {
 	height: 20px;
 	animation-delay: 0s;
 	animation-duration: 20s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -135,7 +136,7 @@ button.button.register-button:checked {
 	height: 60px;
 	animation-delay: 0s;
 	animation-duration: 15s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -146,7 +147,7 @@ button.button.register-button:checked {
 	height: 20px;
 	animation-delay: 0s;
 	animation-duration: 20s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -157,7 +158,7 @@ button.button.register-button:checked {
 	height: 90px;
 	animation-delay: 0s;
 	animation-duration: 25s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -168,7 +169,7 @@ button.button.register-button:checked {
 	height: 50px;
 	animation-delay: 0s;
 	animation-duration: 30s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -179,7 +180,7 @@ button.button.register-button:checked {
 	height: 25px;
 	animation-delay: 0s;
 	animation-duration: 35s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -190,7 +191,7 @@ button.button.register-button:checked {
 	height: 15px;
 	animation-delay: 0s;
 	animation-duration: 40s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
@@ -201,26 +202,26 @@ button.button.register-button:checked {
 	height: 50px;
 	animation-delay: 0s;
 	animation-duration: 45s;
-	border-radius: 50%;
+	// border-radius: 50%;
 	border-top-left-radius: 0 !important;
 	background: #ffc107;
 }
 
 //! UNCOMMENT
-// @keyframes animate {
-// 	0% {
-// 		transform: translateY(0) rotate(0deg);
-// 		opacity: 0;
-// 	}
-// 	50% {
-// 		transform: translateY(-60vh) rotate(360deg);
-// 		opacity: 1;
-// 	}
-// 	100% {
-// 		transform: translateY(-120vh) rotate(720deg);
-// 		opacity: 0;
-// 	}
-// }
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(-60vh) rotate(360deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-120vh) rotate(720deg);
+		opacity: 0;
+	}
+}
 
 //! Steps 
 .steps {
@@ -246,17 +247,17 @@ button.button.register-button:checked {
   animation-delay: 3s;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1.1, 1.1)
-  }
-  50% {
-    transform: scale(1, 1)
-  }
-  100% {
-    transform: scale(1.1, 1.1)
-  }
-}
+// @keyframes pulse {
+//   0% {
+//     transform: scale(1.1, 1.1)
+//   }
+//   50% {
+//     transform: scale(1, 1)
+//   }
+//   100% {
+//     transform: scale(1.1, 1.1)
+//   }
+// }
 .step-container:hover {
   transform: scale(1.1, 1.1);
 }
@@ -298,6 +299,12 @@ button.button.register-button:checked {
   margin-top: -6vh;
 }
 //! Test
+.second-page {
+  height: 90vh;
+}
+.show {
+  background: transparentize($color: white, $amount: 0.5);
+}
 div.card {
   background-color: transparent;
   // border: solid black 5px;
@@ -316,9 +323,11 @@ div.card-header {
   height: 500px;
 }
 .question {
+  font-size: 6vh;
   font-weight: bold;
   margin-top: 80px;
   margin-bottom: 80px;
+  height: 100px;
   // transition: ease-in-out;
   // transition-duration: 2s;
   // transition-delay: 1s;
@@ -411,17 +420,27 @@ body{
     }
   }
 }
-// @keyframes scroll{
-//   0%{
-//     border-color:rgb(0, 0, 0);
-//     transform:translate(0,0);
-//   }
-//   20%{
-//     border-color:rgb(0, 0, 0);
-//     transform:translate(15px,15px);
-//   }
-//   20.1%,100%{
-//     border-color:#ffd64a;
-//   }
-// }
-
+@keyframes scroll{
+  0%{
+    border-color:rgb(0, 0, 0);
+    transform:translate(0,0);
+  }
+  20%{
+    border-color:rgb(0, 0, 0);
+    transform:translate(15px,15px);
+  }
+  20.1%,100%{
+    border-color:#ffd64a;
+  }
+}
+//! Third Page
+.third-page {
+  height: 90vh;
+}
+//! Results
+.results-button {
+  background-color: black;
+  color: white;
+  width: 60%;
+  margin-bottom: 150px;
+}

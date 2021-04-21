@@ -281,6 +281,7 @@ const Questions = () => {
   // }
 
   const handleSubmit = async () => {
+    window.scrollTo(0, 1500)
     console.log('set results here')
     // setCurrentQuestion(currentQuestion + 1)
     setSubmit(Submit + 1)
@@ -307,29 +308,20 @@ const Questions = () => {
   }
 
   const [results, setResults] = useState(false)
-  console.log(results)
 
   const handleResults = () => {
     console.log('Handle Results here')
     setResults(true)
   }
 
+  const handleScroll = () => {
+    window.scrollTo(0, 700)
+  }
+
   if (!questions) return null
 
   return (
     <>
-      <ul className='circles'>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
       <div className="app-description">
         <img className="large-logo" src="/assets/50c1610064e14d1aa26e5c7cf69b67a5.png" />
         <p className="description">﹒The Big 5 Personality Test﹒</p>
@@ -349,108 +341,126 @@ const Questions = () => {
           <p className="step-paragraph"><br /><br />Click on the results button to view your personalised report.</p>
         </div>
       </div>
-      <div className="indicator">
+      <div className="indicator" onClick={handleScroll}>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <Accordion>
-        <Card>
-          <Card.Header>
-            <Accordion.Toggle as={Button} className="take-test" variant="outline-light" eventKey="0">
-              Click to Take Test!
-            </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="0">
-            {userIsAuthenticated() ?
-              <Card.Body>
-                <ul>
-                  <h3 className="question">{questions[currentQuestion].question}</h3>
-                </ul>
-                <ButtonToolbar aria-label="Toolbar with button groups">
-                  <ButtonGroup className="mr-2" aria-label="First group">
-                    <h6>Strongly Disagree</h6>
-                    {/* {currentQuestion >= 1 ?
+      <div className="second-page">
+        <Accordion>
+          <Card>
+            <Card.Header>
+              <Accordion.Toggle as={Button} className="take-test" variant="outline-light" eventKey="0">
+                Click to Take Test!
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="0">
+              {userIsAuthenticated() ?
+                <Card.Body>
+                  <ul>
+                    <h3 className="question">{questions[currentQuestion].question}</h3>
+                  </ul>
+                  <ButtonToolbar aria-label="Toolbar with button groups">
+                    <ButtonGroup className="mr-2" aria-label="First group">
+                      <h6>Strongly Disagree</h6>
+                      {/* {currentQuestion >= 1 ?
                       <Button className="test-button"
                       onClick={handlePrevious}
                       >←</Button>
                       : null} */}
-                    <Button variant="dark" className="test-button" onClick={handleAnswer}>1</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>2</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>3</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>4</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>5</Button>
-                    <h6>Strongly Agree</h6>
-                  </ButtonGroup>
-                </ButtonToolbar>
-                {currentQuestion < 49 ?
-                  <Button variant="dark" className="test-button next-button" onClick={handleNext}>→</Button>
-                  :
-                  <Button onClick={handleSubmit}>Submit</Button>
-                }
-                <ProgressBar variant="warning" now={now} label={`${now}%`} />
-              </Card.Body>
-              :
-              <Card.Body>
-                <h3>Oops...Please login first!</h3>
-              </Card.Body>
-            }
-          </Accordion.Collapse>
-        </Card>
-      </Accordion >
-      {Submit >= 1 ?
-        // <Link to={'/profile'} >
-        <Button onClick={handleResults}>Results</Button>
-        // </Link>
-        :
-        null
-      }
-      {
-        results ?
+                      <Button variant="dark" className="test-button" onClick={handleAnswer}>1</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>2</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>3</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>4</Button> <Button variant="dark" className="test-button" onClick={handleAnswer}>5</Button>
+                      <h6>Strongly Agree</h6>
+                    </ButtonGroup>
+                  </ButtonToolbar>
+                  {currentQuestion < 49 ?
+                    <Button variant="dark" className="test-button next-button" onClick={handleNext}>→</Button>
+                    :
+                    <Button className="test-button next-button" onClick={handleSubmit}>Submit</Button>
+                  }
+                  <ProgressBar variant="warning" now={now} label={`${now}%`} />
+                </Card.Body>
+                :
+                <Card.Body>
+                  <h3>Oops...Please login first!</h3>
+                </Card.Body>
+              }
+            </Accordion.Collapse>
+          </Card>
+        </Accordion >
+      </div>
+      <div className="third-page">
+        {Submit >= 1 ?
+          // <Link to={'/profile'} >
           <>
-            <div>
-              <Doughnut
-                data={{
-                  labels: ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'],
-                  datasets: [
-                    {
-                      label: 'Your Personality Trait Scores',
-                      data: [Extroversion, Agreeableness, Conscientiousness, Neuroticism, OpennessToExperience],
-                      backgroundColor: [
-                        'rgba(0, 230, 184, 0.9)',
-                        'rgba(255, 51, 119, 0.9)',
-                        'rgba(0, 184, 230, 0.9)',
-                        'rgba(255, 117, 26, 0.9)',
-                        'rgba(196, 77, 255, 0.9)'
-                      ],
-                      hoverBorderWidth: 5,
-                      borderColor: [
-                        'rgba(0, 230, 184, 1)',
-                        'rgba(255, 51, 119, 1)',
-                        'rgba(0, 184, 230, 1)',
-                        'rgba(255, 117, 26, 1)',
-                        'rgba(196, 77, 255, 1)'
-                      ],
-                      borderWidth: 1,
-                    }
-                  ],
-                }}
-                height={400}
-                width={400}
-                options={{
-                  maintainAspectRatio: false,
-                  scales: {
-                    yAxes: {
-                      ticks: {
-                        beginAtZero: true,
-                      },
-                    },
-                  },
-                }}
-              />
-            </div >
+            <Button className="test-button next-button results-button" onClick={handleResults}>View Results</Button>
           </>
+          // </Link>
           :
           null
-      }
+        }
+        {
+          results ?
+            <>
+              <div>
+                <Doughnut
+                  data={{
+                    labels: ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'],
+                    datasets: [
+                      {
+                        label: 'Your Personality Trait Scores',
+                        data: [Extroversion, Agreeableness, Conscientiousness, Neuroticism, OpennessToExperience],
+                        backgroundColor: [
+                          'rgba(0, 230, 184, 0.9)',
+                          'rgba(255, 51, 119, 0.9)',
+                          'rgba(0, 184, 230, 0.9)',
+                          'rgba(255, 117, 26, 0.9)',
+                          'rgba(196, 77, 255, 0.9)'
+                        ],
+                        hoverBorderWidth: 5,
+                        borderColor: [
+                          'rgba(0, 230, 184, 1)',
+                          'rgba(255, 51, 119, 1)',
+                          'rgba(0, 184, 230, 1)',
+                          'rgba(255, 117, 26, 1)',
+                          'rgba(196, 77, 255, 1)'
+                        ],
+                        borderWidth: 1,
+                      }
+                    ],
+                  }}
+                  height={300}
+                  width={300}
+                  options={{
+                    maintainAspectRatio: false,
+                    scales: {
+                      yAxes: {
+                        ticks: {
+                          beginAtZero: true,
+                        },
+                      },
+                    },
+                  }}
+                />
+              </div >
+            </>
+            :
+            null
+        }
+        <ul className='circles'>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </>
   )
 }
