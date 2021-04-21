@@ -283,7 +283,7 @@ const Questions = () => {
   // }
 
   const handleSubmit = async () => {
-    window.scrollTo(0, 1500)
+    window.scrollTo(0, 1550)
     console.log('set results here')
     // setCurrentQuestion(currentQuestion + 1)
     setSubmit(Submit + 1)
@@ -446,100 +446,178 @@ const Questions = () => {
                   }}
                 />
               </div >
+              <ul className="result-data">
+                <Carousel>
+                  <Carousel.Item>
+                    <br />
+                    <br />
+                    <li className="E all-li">
+                      <h5 className="E-title all-titles">Extroversion</h5>
+                      <div className="info-container">
+                        <p className="p-one">Extroversion reflects the tendency and intensity to which someone seeks interaction with their environment, particularly socially. It encompasses the comfort and assertiveness levels of people in social situations.<br />Additionally, it also reflects the sources from which someone draws energy.</p>
+                        <p className="p-two">
+                          <h5 className="title-two">You are the type of person who...</h5>
+                          {Extroversion > 20 ?
+                            <ul className="bullet-points">
+                              <li className="bullet">Thrives on socialising with others.</li>
+                              <li className="bullet">Prefers being with others and meeting new people.</li>
+                              <li className="bullet">Likes to start conversations and talking to others.</li>
+                              <li className="bullet">Has a wide social circle of friends and acquaintances.</li>
+                              <li className="bullet">Finds it easy to make new friends.</li>
+                              <li className="bullet">Sometimes says things before thinking about them.</li>
+                              <li className="bullet">Enjoys being the center of attention.</li>
+                            </ul>
+                            :
+                            <ul className="bullet-points">
+                              <li className="bullet">Feels exhausted after socializing.</li>
+                              <li className="bullet">Prefers being alone or by themselves.</li>
+                              <li className="bullet">Dislikes making small talk or starting conversations.</li>
+                              <li className="bullet">Generally thinks things through before speaking.</li>
+                              <li className="bullet">Dislikes being the center of attention.</li>
+                            </ul>
+                          }
+                        </p>
+                      </div>
+                    </li>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <br />
+                    <br />
+                    <li className="A">
+                      <h5 className="A-title all-titles">Agreeableness</h5>
+                      <div className="info-container">
+                        <p className="p-one">Agreeableness refers to how people tend to treat relationships with others. Unlike extroversion which consists of the pursuit of relationships, agreeableness focuses on people’s orientation and interactions with others.</p>
+                        <p className="p-two">
+                          <h5 className="title-two">You are the type of person who...</h5>
+                          {Agreeableness > 20 ?
+                            <ul className="bullet-points">
+                              <li className="bullet-A">Kind and compassionate toward others.</li>
+                              <li className="bullet-A">Has a great deal of interest in and wants to help others.</li>
+                              <li className="bullet-A">Feels empathy and concern for other people.</li>
+                              <li className="bullet-A">Prefers to cooperate and be helpful.</li>
+                            </ul>
+                            :
+                            <ul className="bullet-points">
+                              <li className="bullet-A">Doesn’t care about other people’s feelings or problems.</li>
+                              <li className="bullet-A">Takes little interest in others.</li>
+                              <li className="bullet-A">Can be seen as insulting or dismissive of others.</li>
+                              <li className="bullet-A">Can be manipulative.</li>
+                              <li className="bullet-A">Prefers to be competitive and stubborn.</li>
+                            </ul>
+                          }
+                        </p>
+                      </div>
+                    </li>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <br />
+                    <br />
+                    <li className="C">
+                      <h5 className="C-title all-titles">Conscientiousness</h5>
+                      <div className="info-container">
+                        <p className="p-one">Conscientiousness describes a person’s ability to regulate their impulse control in order to engage in goal-directed behaviors. It measures elements such as control, inhibition, and persistency of behavior.</p>
+                        <p className="p-two">
+                          <h5 className="title-two">You are the type of person who...</h5>
+                          {Conscientiousness > 20 ?
+                            <ul className="bullet-points">
+                              <li className="bullet-C">Goal- and detail-oriented and are well organized.</li>
+                              <li className="bullet-C">Doesn’t give in to impulses.</li>
+                              <li className="bullet-C">Finishes important tasks on time.</li>
+                              <li className="bullet-C">Enjoys adhering to a schedule.</li>
+                              <li className="bullet-C">Is on time when meeting others.</li>
+                            </ul>
+                            :
+                            <ul className="bullet-points">
+                              <li className="bullet-C">Dislikes structure and schedules.</li>
+                              <li className="bullet-C">Messy and less detail-oriented.</li>
+                              <li className="bullet-C">Fails to return things or put them back where they belong.</li>
+                              <li className="bullet-C">Procrastinates about important tasks and rarely finishes them on time.</li>
+                              <li className="bullet-C">Fails to stick to a schedule.</li>
+                              <li className="bullet-C">Is always late when meeting others.</li>
+                            </ul>
+                          }
+                        </p>
+                      </div>
+                    </li>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <br />
+                    <br />
+                    <li className="N">
+                      <h5 className="N-title all-titles">Neuroticism</h5>
+                      <div className="info-container">
+                        <p className="p-one">Neuroticism describes the overall emotional stability of an individual through how they perceive the world. It takes into account how likely a person is to interpret events as threatening or difficult.
+
+                          It also includes one’s propensity to experience negative emotions.</p>
+                        <p className="p-two">
+                          <h5 className="title-two">You are the type of person who...</h5>
+                          {Neuroticism > 20 ?
+                            <ul className="bullet-points">
+                              <li className="bullet-N">Gets upset more easily.</li>
+                              <li className="bullet-N">Appears anxious, irritable, or moody.</li>
+                              <li className="bullet-N">Appears to always be stressed.</li>
+                              <li className="bullet-N">Worries constantly.</li>
+                              <li className="bullet-N">Experiences visible mood swings.</li>
+                              <li className="bullet-N">Struggles to bounce back after troubles in life.</li>
+                            </ul>
+                            :
+                            <ul className="bullet-points">
+                              <li className="bullet-N">Emotionally stable and resilient.</li>
+                              <li className="bullet-N">Deals well with stress.</li>
+                              <li className="bullet-N">Rarely feels sad, moody, or depressed.</li>
+                              <li className="bullet-N">Relaxed and doesn’t worry much.</li>
+                            </ul>
+                          }
+                        </p>
+                      </div>
+                    </li>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <br />
+                    <br />
+                    <li className="O">
+                      <h5 className="O-title all-titles">Openness to Experience</h5>
+                      <div className="info-container">
+                        <p className="p-one">Openness to experience refers to one’s willingness to try new things as well as engage in imaginative and intellectual activities. It includes the ability to “think outside of the box.”</p>
+                        <p className="p-two">
+                          <h5 className="title-two">You are the type of person who...</h5>
+                          {OpennessToExperience > 20 ?
+                            <ul className="bullet-points">
+                              <li className="bullet-O">More creative or intellectual in focus.</li>
+                              <li className="bullet-O">Embraces trying new things or visiting new places.</li>
+                              <li className="bullet-O">Enjoys taking on new challenges.</li>
+                              <li className="bullet-O">Abstract ideas come more easily.</li>
+                            </ul>
+                            :
+                            <ul className="bullet-points">
+                              <li className="bullet-O">More traditional in thinking and less creative.</li>
+                              <li className="bullet-O">Avoids change or new ideas.</li>
+                              <li className="bullet-O">Does not enjoy new things or visiting new places.</li>
+                              <li className="bullet-O">Has trouble with abstract or theoretical concepts.</li>
+                            </ul>
+                          }
+                        </p>
+                      </div>
+                    </li>
+                  </Carousel.Item>
+                </Carousel>
+              </ul>
+              <ul className='circles'>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
             </>
             :
             null
         }
-        <ul className="result-data">
-          <Carousel>
-            <li className="E all-li">
-              <h5 className="E-title all-titles">Extroversion</h5>
-              <div className="info-container">
-                <p className="p-one">Extroversion reflects the tendency and intensity to which someone seeks interaction with their environment, particularly socially. It encompasses the comfort and assertiveness levels of people in social situations.<br />Additionally, it also reflects the sources from which someone draws energy.</p>
-                <p className="p-two">
-                  <h5 className="title-two">You are the type of person who...</h5>
-                  {Extroversion > 20 ?
-                    <ul className="bullet-points">
-                      <li className="bullet">Thrives on socialising with others.</li>
-                      <li className="bullet">Prefers being with others and meeting new people.</li>
-                      <li className="bullet">Likes to start conversations and talking to others.</li>
-                      <li className="bullet">Has a wide social circle of friends and acquaintances.</li>
-                      <li className="bullet">Finds it easy to make new friends.</li>
-                      <li className="bullet">Sometimes says things before thinking about them.</li>
-                      <li className="bullet">Enjoys being the center of attention.</li>
-                    </ul>
-                    :
-                    <ul className="bullet-points">
-                      <li className="bullet">Feels exhausted after socializing.</li>
-                      <li className="bullet">Prefers being alone or by themselves.</li>
-                      <li className="bullet">Dislikes making small talk or starting conversations.</li>
-                      <li className="bullet">Generally thinks things through before speaking.</li>
-                      <li className="bullet">Dislikes being the center of attention.</li>
-                    </ul>
-                  }
-                </p>
-              </div>
-            </li>
-            <li className="A">
-              <h5 className="A-title all-titles">Agreeableness</h5>
-              <div className="info-container">
-                <p className="p-one">Agreeableness refers to how people tend to treat relationships with others. Unlike extroversion which consists of the pursuit of relationships, agreeableness focuses on people’s orientation and interactions with others.</p>
-                <p className="p-two">
-                  <h5 className="title-two">You are the type of person who...</h5>
-                  {Agreeableness > 20 ?
-                    <ul className="bullet-points">
-                      <li className="bullet-A">Kind and compassionate toward others.</li>
-                      <li className="bullet-A">Has a great deal of interest in and wants to help others.</li>
-                      <li className="bullet-A">Feels empathy and concern for other people.</li>
-                      <li className="bullet-A">Prefers to cooperate and be helpful.</li>
-                    </ul>
-                    :
-                    <ul className="bullet-points">
-                      <li className="bullet-A">Doesn’t care about other people’s feelings or problems.</li>
-                      <li className="bullet-A">Takes little interest in others.</li>
-                      <li className="bullet-A">Can be seen as insulting or dismissive of others.</li>
-                      <li className="bullet-A">Can be manipulative.</li>
-                      <li className="bullet-A">Prefers to be competitive and stubborn.</li>
-                    </ul>
-                  }
-                </p>
-              </div>
-            </li>
-            <li className="C">
-              <h5 className="C-title all-titles">Conscientiousness</h5>
-              <div className="info-container">
-                <p className="p-one"></p>
-                <p className="p-two"></p>
-              </div>
-            </li>
-            <li className="N">
-              <h5 className="N-title all-titles">Neuroticism</h5>
-              <div className="info-container">
-                <p className="p-one"></p>
-                <p className="p-two"></p>
-              </div>
-            </li>
-            <li className="O">
-              <h5 className="O-title all-titles">Openness to Experience</h5>
-              <div className="info-container">
-                <p className="p-one"></p>
-                <p className="p-two"></p>
-              </div>
-            </li>
-          </Carousel>
-        </ul>
-        <ul className='circles'>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
       </div>
     </>
   )
