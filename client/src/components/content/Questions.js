@@ -10,6 +10,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import { defaults, Doughnut } from 'react-chartjs-2'
 defaults.global.legend.position = 'bottom'
 
+
 const Questions = () => {
   //! Get questions from api
   const [questions, setQuestions] = useState('')
@@ -448,6 +449,23 @@ const Questions = () => {
             :
             null
         }
+        <ul className="result-data">
+          <li className="E">
+            <h5 className="E-title">Extroversion</h5>
+          </li>
+          <li className="A">
+            <h5>Agreeableness</h5>
+          </li>
+          <li className="C">
+            <h5>Conscientiousness</h5>
+          </li>
+          <li className="N">
+            <h5>Neuroticism</h5>
+          </li>
+          <li className="O">
+            <h5>Openness to Experience</h5>
+          </li>
+        </ul>
         <ul className='circles'>
           <li></li>
           <li></li>

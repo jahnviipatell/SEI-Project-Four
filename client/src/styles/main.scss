@@ -442,5 +442,41 @@ body{
   background-color: black;
   color: white;
   width: 60%;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+}
+.result-data {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 20px auto;
+  padding-left: 0;
+}
+.E {
+  border: solid #00E6B8 3px;
+  height: 200px;
+  width: 90vw;
+}
+.E-title {
+  font-size: 2vh;
+  height: 30px;
+  width: 80%;
+  position: absolute;
+  width: 13vw;
+  margin-top: -15px;
+  margin-left: 20px;
+  padding-top: 5px;
+  background-color: #00E6B8;
+}
+.A {
+  border: solid 3px rgba(255, 51, 119, 0.9);
+}
+.C {
+  border: solid 3px rgba(0, 184, 230, 0.9);
+}
+.N {
+  border: solid 3px rgba(255, 117, 26, 0.9);
+}
+.O {
+  border: solid 3px rgba(196, 77, 255, 0.9);
 }
