@@ -452,31 +452,74 @@ body{
   margin: 20px auto;
   padding-left: 0;
 }
-.E {
-  border: solid #00E6B8 3px;
+.all-li {
   height: 200px;
   width: 90vw;
+  margin-bottom: 20px;
 }
-.E-title {
+.E {
+  border: solid #00E6B8 3px;
+}
+.all-titles {
   font-size: 2vh;
   height: 30px;
-  width: 80%;
   position: absolute;
-  width: 13vw;
+  width: 15vw;
   margin-top: -15px;
   margin-left: 20px;
   padding-top: 5px;
+}
+.E-title {
   background-color: #00E6B8;
 }
 .A {
-  border: solid 3px rgba(255, 51, 119, 0.9);
+  border: solid 3px rgba(255, 51, 119, 1);
+}
+.A-title {
+  background-color: rgba(255, 51, 119, 1);
 }
 .C {
-  border: solid 3px rgba(0, 184, 230, 0.9);
+  border: solid 3px rgba(0, 184, 230, 1);
+}
+.C-title {
+  background-color: rgba(0, 184, 230, 1);
 }
 .N {
-  border: solid 3px rgba(255, 117, 26, 0.9);
+  border: solid 3px rgba(255, 117, 26, 1);
+}
+.N-title {
+  background-color: rgba(255, 117, 26, 1);
 }
 .O {
-  border: solid 3px rgba(196, 77, 255, 0.9);
+  border: solid 3px rgba(196, 77, 255, 1);
 }
+.O-title {
+  background-color: rgba(196, 77, 255, 1);
+}
+.info-container {
+  display: flex;
+}
+.p-one {
+  width: 40%;
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+.p-two {
+  text-align: left;
+  margin-left: 60px;
+}
+.title-two {
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 2vh;
+}
+.bullet-points {
+  font-size: 2vh;
+  list-style: none;
+}
+li.bullet::before {content: "▪"; color:#00E6B8}
+li.bullet-A::before {content: "▪"; color: rgba(255, 51, 119, 0.9)}
+li.bullet-C::before {content: "▪"; color: rgba(0, 184, 230, 0.9)}
+li.bullet-N::before {content: "▪"; color: rgba(255, 117, 26, 0.9)}
+li.bullet-O::before {content: "▪"; color: rgba(196, 77, 255, 0.9)}
