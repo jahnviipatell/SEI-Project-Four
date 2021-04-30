@@ -18,7 +18,7 @@ const Questions = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/questions')
+      const { data } = await axios.get('/api/questions/')
       setQuestions(data)
     }
     getData()
