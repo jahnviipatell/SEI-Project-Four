@@ -10,7 +10,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import { defaults, Doughnut } from 'react-chartjs-2'
 defaults.global.legend.position = 'bottom'
 import Carousel from 'react-bootstrap/Carousel'
-
+import largeLogo from '../../assets/50c1610064e14d1aa26e5c7cf69b67a5.png'
 
 const Questions = () => {
   //! Get questions from api
@@ -18,7 +18,7 @@ const Questions = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/questions')
+      const { data } = await axios.get('/api/questions/')
       setQuestions(data)
     }
     getData()
@@ -328,7 +328,7 @@ const Questions = () => {
   return (
     <>
       <div className="app-description">
-        <img className="large-logo" src="/assets/50c1610064e14d1aa26e5c7cf69b67a5.png" />
+        <img className="large-logo" src={largeLogo} />
         <p className="description">﹒The Big 5 Personality Test﹒</p>
       </div>
       <div className="steps">

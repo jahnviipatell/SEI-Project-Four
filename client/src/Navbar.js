@@ -10,6 +10,7 @@ import Popover from 'react-bootstrap/Popover'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
+import largeLogo from './assets/50c1610064e14d1aa26e5c7cf69b67a5.png'
 
 //! Add Login form - collapses
 
@@ -31,7 +32,7 @@ const MyNavbar = () => {
   return (
     <>
       <Navbar expand="lg" className="bring-to-front">
-        <Navbar.Brand href="/"><img className="logo" src="/assets/50c1610064e14d1aa26e5c7cf69b67a5.png" /></Navbar.Brand>
+        <Navbar.Brand href="/"><img className="logo" src={largeLogo} /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
