@@ -48,7 +48,8 @@ By the start of day four, I was happy with the backend to the point where I was 
 
 - Once the user has signed up they are able to login and take the personality test. 
 <img width="1436" alt="Screenshot 2021-05-11 at 16 12 06" src="https://user-images.githubusercontent.com/78035012/118381632-a4fac180-b5e4-11eb-97ed-580ed2d18cb3.png">
--When the user picks a number and clicks on the → to proceed to the next question the handleAnswer function will post an answer entry to the answer database. 
+- When the user picks a number and clicks on the → to proceed to the next question the handleAnswer function will post an answer entry to the answer database. 
+
 ```
  const handleSubmit = async () => {
     console.log('set results here')
@@ -75,7 +76,7 @@ By the start of day four, I was happy with the backend to the point where I was 
       console.log(Errors)
     }
   }
- ```
+```
 - Each handleAnswer will add to the sum total of the corresponding trait total. 
 - On submit at the end of the questionnaire the sum total is calculated and the results are displayed using an external package, Chart.js.
 ![results](https://user-images.githubusercontent.com/78035012/117842376-c6bb1800-b275-11eb-841b-d867e324fa7f.gif)
