@@ -79,7 +79,9 @@ By the start of day four, I was happy with the backend to the point where I was 
 ```
 - Each handleAnswer will add to the sum total of the corresponding trait total. 
 - On submit at the end of the questionnaire the sum total is calculated and the results are displayed using an external package, Chart.js.
+
 ![results](https://user-images.githubusercontent.com/78035012/117842376-c6bb1800-b275-11eb-841b-d867e324fa7f.gif)
+
 - A carousel of descriptions of each trait and the user’s results are displayed below the chart. 
 
 # Challenges
