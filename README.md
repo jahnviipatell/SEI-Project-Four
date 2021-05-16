@@ -20,7 +20,7 @@ This app has been deployed with Heroku, click to view [Traits](https://traitts.h
 - Have a visually impressive design
 - Be deployed online so it's publicly accessible
 - Write your code DRY and build your APIs RESTful.
-Timeframe: 8 days
+- Timeframe: 8 days
 
 # Technologies Used:
 - Django
